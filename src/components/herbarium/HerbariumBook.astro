@@ -7,95 +7,104 @@ import Magnifier from './Magnifier.astro';
 <section class="study" aria-labelledby="study-title" data-herbarium>
   <div class="study__heading">
     <div>
-      <p class="eyebrow">Interaction study 01 <span>·</span> The herbarium</p>
+      <p class="eyebrow">Aluhe <span>·</span> Herbario I <span>·</span> Estudio visual 02</p>
       <h1 id="study-title">El herbario de gabinete</h1>
     </div>
-    <p class="study__aside">Una prueba de libro, lupa y folio móvil.</p>
+    <p class="study__aside"><i>Salvia officinalis</i> L. · Lámina 38</p>
   </div>
 
   <div class="book-shell">
+    <div class="book-viewport">
     <div class="book-stage" data-book-stage>
       <div class="book" data-book aria-label="Herbario interactivo de ocho folios">
-        <HerbariumPage number="01" variant="folio--opening" label="Folio 1: presentación">
-          <div class="opening-mark" aria-hidden="true">A<span>·</span></div>
+        <HerbariumPage number="01" variant="folio--opening" label="Folio 1: portada interior de Aluhe">
+          <div class="opening-topline"><span>BOTÁNICA OCULTA</span><span>HERBARIO I</span></div>
           <div class="opening-title">
-            <span class="eyebrow">Volumen I · Estudio provisional</span>
+            <span class="eyebrow">Volumen I · Registro 001</span>
             <strong>ALUHE</strong>
             <span>Botánica Oculta</span>
           </div>
-          <p class="opening-bottom">Un archivo para mirar de cerca.</p>
+          <p class="opening-bottom"><span>001 / SALVIA</span><i>Salvia officinalis</i> L.</p>
         </HerbariumPage>
 
         <HerbariumPage number="02" variant="folio--opening-right" label="Folio 2: introducción a la salvia">
-          <div class="opening-right__top"><span>HERBARIO I</span><span>01 / 04</span></div>
+          <div class="opening-right__top"><span>HERBARIO I</span><span>PL. 038</span></div>
           <div class="opening-right__center">
             <span class="rule"></span>
-            <p>Una primera aproximación<br />a la forma de una planta.</p>
+            <p>REGISTRO BOTÁNICO / 001</p>
             <h2>Salvia<br /><i>officinalis</i></h2>
+            <span class="opening-right__family">Familia Lamiaceae</span>
             <span class="rule rule--short"></span>
           </div>
-          <p class="folio-note">Páginas de prueba · contenido provisional</p>
+          <p class="folio-note">Espécimen en preparación · lámina histórica conservada</p>
         </HerbariumPage>
 
         <HerbariumPage number="03" variant="folio--visual" label="Folio 3: espacio para espécimen">
-          <div class="folio-kicker">01 / ESPÉCIMEN</div>
-          <figure class="plate-frame inspectable" data-magnify-src="/images/salvia/specimen-placeholder.svg">
+          <div class="folio-kicker folio-kicker--split"><span>01 / ESPÉCIMEN</span><span>EN PREPARACIÓN</span></div>
+          <figure class="plate-frame plate-frame--specimen inspectable" data-magnify-src="/images/salvia/specimen-placeholder.svg">
             <img src="/images/salvia/specimen-placeholder.svg" alt="Placeholder provisional para un futuro espécimen real de Salvia; aún sin fotografía validada" />
           </figure>
-          <p class="figure-caption"><span>Fig. 001</span><span>Espécimen · imagen pendiente</span></p>
+          <p class="figure-caption"><span>Fig. 001</span><span>Espécimen pendiente de incorporación</span></p>
         </HerbariumPage>
 
-        <HerbariumPage number="04" variant="folio--text" label="Folio 4: ficha breve de Salvia">
-          <div class="folio-kicker">ALUHE / HERBARIO I</div>
+        <HerbariumPage number="04" variant="folio--text folio--specimen-entry" label="Folio 4: ficha breve de Salvia">
+          <div class="folio-kicker">ALUHE / REGISTRO 001</div>
           <div class="entry-heading">
             <span class="entry-index">001</span>
             <h2>Salvia</h2>
             <p><i>Salvia officinalis</i> L.</p>
           </div>
-          <p class="entry-copy">Un espacio para observar el espécimen y organizar sus referencias visuales. El registro y las imágenes de esta prueba son provisionales.</p>
-          <SpecimenLabel type="Espécimen" />
+          <p class="entry-family">Familia <strong>Lamiaceae</strong></p>
+          <p class="entry-copy">El soporte queda reservado para el espécimen prensado. La imagen y los datos de recolección están pendientes.</p>
+          <SpecimenLabel type="Espécimen" source="En preparación" />
         </HerbariumPage>
 
-        <HerbariumPage number="05" variant="folio--visual" label="Folio 5: espacio para lámina botánica">
-          <div class="folio-kicker">02 / LÁMINA BOTÁNICA</div>
-          <figure class="plate-frame inspectable" data-magnify-src="/images/salvia/historical-placeholder.svg">
-            <img src="/images/salvia/historical-placeholder.svg" alt="Placeholder provisional para una futura lámina histórica verificada de Salvia officinalis" />
+        <HerbariumPage number="05" variant="folio--visual folio--archive" label="Folio 5: lámina histórica de Salvia officinalis">
+          <div class="folio-kicker folio-kicker--split"><span>02 / LÁMINA HISTÓRICA</span><span>PL. 038</span></div>
+          <figure class="plate-frame plate-frame--archive inspectable" data-magnify-src="/images/salvia/salvia-kohler-plate-38-web.webp">
+            <span class="archive-document">
+              <img src="/images/salvia/salvia-kohler-plate-38-web.webp" width="1600" height="2284" alt="Ilustración botánica histórica de Salvia officinalis con flores, hojas y detalles anatómicos" />
+            </span>
           </figure>
-          <p class="figure-caption"><span>Fig. 002</span><span>Lámina histórica · pendiente</span></p>
+          <p class="figure-caption"><span>Fig. 002</span><span>Köhler · 1887 · lámina 38</span></p>
         </HerbariumPage>
 
-        <HerbariumPage number="06" variant="folio--text" label="Folio 6: referencias de la lámina">
-          <div class="folio-kicker">ARCHIVO VISUAL / 02</div>
-          <div class="entry-heading entry-heading--small">
-            <span class="entry-index">OBSERVACIÓN</span>
-            <h2>Una lámina,<br />otra lectura.</h2>
+        <HerbariumPage number="06" variant="folio--text folio--archive-notes" label="Folio 6: procedencia de la lámina">
+          <div class="folio-kicker">ALUHE / ARCHIVO VISUAL</div>
+          <div class="entry-heading entry-heading--archive">
+            <span class="entry-index">LÁMINA 38 / 1887</span>
+            <h2>Salvia<br /><i>officinalis</i></h2>
           </div>
-          <p class="entry-copy">Este folio reserva lugar para referencias morfológicas y datos de procedencia que se verificarán antes de publicar el archivo.</p>
-          <div class="fine-rule"></div>
-          <SpecimenLabel type="Lámina" />
+          <div class="archive-source">
+            <p><i>Köhler’s Medizinal-Pflanzen</i></p>
+            <p>Biodiversity Heritage Library</p>
+            <p>Dominio público</p>
+          </div>
+          <SpecimenLabel type="Lámina" source="Köhler · 1887" />
         </HerbariumPage>
 
-        <HerbariumPage number="07" variant="folio--visual" label="Folio 7: área de inspección">
-          <div class="folio-kicker">03 / INSPECCIÓN</div>
-          <figure class="plate-frame inspectable" data-magnify-src="/images/salvia/inspection-placeholder.svg">
-            <img src="/images/salvia/inspection-placeholder.svg" alt="Gráfico provisional con retícula para probar la lupa; no representa una planta" />
+        <HerbariumPage number="07" variant="folio--visual folio--detail" label="Folio 7: detalle floral de la lámina histórica">
+          <div class="folio-kicker folio-kicker--split"><span>03 / DETALLE</span><span>PL. 038</span></div>
+          <figure class="plate-frame plate-frame--detail inspectable" data-magnify-src="/images/salvia/salvia-kohler-floral-detail.webp">
+            <img src="/images/salvia/salvia-kohler-floral-detail.webp" width="1300" height="1600" alt="Detalle de flores y hojas de Salvia officinalis recortado de la lámina histórica" />
           </figure>
-          <p class="figure-caption"><span>Fig. 003</span><span>Mové la lupa sobre la imagen</span></p>
+          <p class="figure-caption"><span>Fig. 003</span><span>Detalle de la misma lámina</span></p>
         </HerbariumPage>
 
-        <HerbariumPage number="08" variant="folio--closing" label="Folio 8: cierre del estudio">
-          <div class="folio-kicker">ALUHE / ESTUDIO 01</div>
+        <HerbariumPage number="08" variant="folio--closing" label="Folio 8: cierre del estudio visual">
+          <div class="folio-kicker">ALUHE / HERBARIO I</div>
           <div class="closing-content">
-            <span class="closing-symbol" aria-hidden="true">✳</span>
+            <span class="closing-sequence">OBSERVAR <b>·</b> CATALOGAR <b>·</b> DESCUBRIR</span>
             <h2>Mirar<br />de nuevo.</h2>
-            <p>El archivo continúa cuando el libro, la inspección y la lectura encuentran su ritmo.</p>
+            <p><i>Salvia officinalis</i> L. <span>·</span> Registro 001</p>
           </div>
           <span class="closing-cta" aria-label="Continuar al archivo, demostración sin enlace">Continuar al archivo <span>↗</span></span>
-          <p class="folio-note">Demostración · destino aún no disponible</p>
+          <p class="folio-note">Archivo en preparación · destino aún no disponible</p>
         </HerbariumPage>
       </div>
       <div class="mobile-gesture-surface" data-mobile-gesture-surface aria-hidden="true"></div>
       <Magnifier />
+    </div>
     </div>
   </div>
 

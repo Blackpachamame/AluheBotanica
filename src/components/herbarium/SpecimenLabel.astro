@@ -1,19 +1,35 @@
 ---
 interface Props {
+  number?: string;
+  name?: string;
+  scientificName?: string;
+  authority?: string;
+  family?: string;
   type?: string;
+  collection?: string;
+  source?: string;
 }
 
-const { type = 'Lámina / espécimen' } = Astro.props;
+const {
+  number = '001',
+  name = 'Salvia',
+  scientificName = 'Salvia officinalis',
+  authority = 'L.',
+  family = 'Lamiaceae',
+  type = 'Lámina / espécimen',
+  collection = 'Volumen I',
+  source = 'En preparación',
+} = Astro.props;
 ---
 
-<aside class="specimen-label" aria-label="Etiqueta provisional de herbario">
-  <div class="specimen-label__top"><span>ALUHE · HERBARIO I</span><span>Nº 001</span></div>
-  <div class="specimen-label__name">SALVIA</div>
-  <p class="specimen-label__latin"><i>Salvia officinalis</i> L.</p>
+<aside class="specimen-label" aria-label={`Etiqueta de herbario de ${name}`}>
+  <div class="specimen-label__top"><span>ALUHE · HERBARIO I</span><span>Nº {number}</span></div>
+  <div class="specimen-label__name">{name}</div>
+  <p class="specimen-label__latin"><i>{scientificName}</i> {authority}</p>
   <dl>
-    <div><dt>Familia</dt><dd>Lamiaceae</dd></div>
+    <div><dt>Familia</dt><dd>{family}</dd></div>
     <div><dt>Tipo</dt><dd>{type}</dd></div>
-    <div><dt>Colección</dt><dd>Volumen I</dd></div>
-    <div><dt>Fuente</dt><dd>Provisional</dd></div>
+    <div><dt>Colección</dt><dd>{collection}</dd></div>
+    <div><dt>Fuente</dt><dd>{source}</dd></div>
   </dl>
 </aside>
