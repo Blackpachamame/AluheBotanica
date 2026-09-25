@@ -1,0 +1,19 @@
+---
+interface Props {
+  type?: string;
+}
+
+const { type = 'Lámina / espécimen' } = Astro.props;
+---
+
+<aside class="specimen-label" aria-label="Etiqueta provisional de herbario">
+  <div class="specimen-label__top"><span>ALUHE · HERBARIO I</span><span>Nº 001</span></div>
+  <div class="specimen-label__name">SALVIA</div>
+  <p class="specimen-label__latin"><i>Salvia officinalis</i> L.</p>
+  <dl>
+    <div><dt>Familia</dt><dd>Lamiaceae</dd></div>
+    <div><dt>Tipo</dt><dd>{type}</dd></div>
+    <div><dt>Colección</dt><dd>Volumen I</dd></div>
+    <div><dt>Fuente</dt><dd>Provisional</dd></div>
+  </dl>
+</aside>

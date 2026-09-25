@@ -1,0 +1,14 @@
+---
+interface Props {
+  number: string;
+  variant?: string;
+  label: string;
+}
+
+const { number, variant = '', label } = Astro.props;
+---
+
+<article class={`folio ${variant}`} aria-label={label}>
+  <div class="folio__content"><slot /></div>
+  <span class="folio__number" aria-hidden="true">{number}</span>
+</article>

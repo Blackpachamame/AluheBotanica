@@ -1,0 +1,116 @@
+---
+import HerbariumPage from './HerbariumPage.astro';
+import SpecimenLabel from './SpecimenLabel.astro';
+import Magnifier from './Magnifier.astro';
+---
+
+<section class="study" aria-labelledby="study-title" data-herbarium>
+  <div class="study__heading">
+    <div>
+      <p class="eyebrow">Interaction study 01 <span>·</span> The herbarium</p>
+      <h1 id="study-title">El herbario de gabinete</h1>
+    </div>
+    <p class="study__aside">Una prueba de libro, lupa y folio móvil.</p>
+  </div>
+
+  <div class="book-shell">
+    <div class="book-stage" data-book-stage>
+      <div class="book" data-book aria-label="Herbario interactivo de ocho folios">
+        <HerbariumPage number="01" variant="folio--opening" label="Folio 1: presentación">
+          <div class="opening-mark" aria-hidden="true">A<span>·</span></div>
+          <div class="opening-title">
+            <span class="eyebrow">Volumen I · Estudio provisional</span>
+            <strong>ALUHE</strong>
+            <span>Botánica Oculta</span>
+          </div>
+          <p class="opening-bottom">Un archivo para mirar de cerca.</p>
+        </HerbariumPage>
+
+        <HerbariumPage number="02" variant="folio--opening-right" label="Folio 2: introducción a la salvia">
+          <div class="opening-right__top"><span>HERBARIO I</span><span>01 / 04</span></div>
+          <div class="opening-right__center">
+            <span class="rule"></span>
+            <p>Una primera aproximación<br />a la forma de una planta.</p>
+            <h2>Salvia<br /><i>officinalis</i></h2>
+            <span class="rule rule--short"></span>
+          </div>
+          <p class="folio-note">Páginas de prueba · contenido provisional</p>
+        </HerbariumPage>
+
+        <HerbariumPage number="03" variant="folio--visual" label="Folio 3: espacio para espécimen">
+          <div class="folio-kicker">01 / ESPÉCIMEN</div>
+          <figure class="plate-frame inspectable" data-magnify-src="/images/salvia/specimen-placeholder.svg">
+            <img src="/images/salvia/specimen-placeholder.svg" alt="Placeholder provisional para un futuro espécimen real de Salvia; aún sin fotografía validada" />
+          </figure>
+          <p class="figure-caption"><span>Fig. 001</span><span>Espécimen · imagen pendiente</span></p>
+        </HerbariumPage>
+
+        <HerbariumPage number="04" variant="folio--text" label="Folio 4: ficha breve de Salvia">
+          <div class="folio-kicker">ALUHE / HERBARIO I</div>
+          <div class="entry-heading">
+            <span class="entry-index">001</span>
+            <h2>Salvia</h2>
+            <p><i>Salvia officinalis</i> L.</p>
+          </div>
+          <p class="entry-copy">Un espacio para observar el espécimen y organizar sus referencias visuales. El registro y las imágenes de esta prueba son provisionales.</p>
+          <SpecimenLabel type="Espécimen" />
+        </HerbariumPage>
+
+        <HerbariumPage number="05" variant="folio--visual" label="Folio 5: espacio para lámina botánica">
+          <div class="folio-kicker">02 / LÁMINA BOTÁNICA</div>
+          <figure class="plate-frame inspectable" data-magnify-src="/images/salvia/historical-placeholder.svg">
+            <img src="/images/salvia/historical-placeholder.svg" alt="Placeholder provisional para una futura lámina histórica verificada de Salvia officinalis" />
+          </figure>
+          <p class="figure-caption"><span>Fig. 002</span><span>Lámina histórica · pendiente</span></p>
+        </HerbariumPage>
+
+        <HerbariumPage number="06" variant="folio--text" label="Folio 6: referencias de la lámina">
+          <div class="folio-kicker">ARCHIVO VISUAL / 02</div>
+          <div class="entry-heading entry-heading--small">
+            <span class="entry-index">OBSERVACIÓN</span>
+            <h2>Una lámina,<br />otra lectura.</h2>
+          </div>
+          <p class="entry-copy">Este folio reserva lugar para referencias morfológicas y datos de procedencia que se verificarán antes de publicar el archivo.</p>
+          <div class="fine-rule"></div>
+          <SpecimenLabel type="Lámina" />
+        </HerbariumPage>
+
+        <HerbariumPage number="07" variant="folio--visual" label="Folio 7: área de inspección">
+          <div class="folio-kicker">03 / INSPECCIÓN</div>
+          <figure class="plate-frame inspectable" data-magnify-src="/images/salvia/inspection-placeholder.svg">
+            <img src="/images/salvia/inspection-placeholder.svg" alt="Gráfico provisional con retícula para probar la lupa; no representa una planta" />
+          </figure>
+          <p class="figure-caption"><span>Fig. 003</span><span>Mové la lupa sobre la imagen</span></p>
+        </HerbariumPage>
+
+        <HerbariumPage number="08" variant="folio--closing" label="Folio 8: cierre del estudio">
+          <div class="folio-kicker">ALUHE / ESTUDIO 01</div>
+          <div class="closing-content">
+            <span class="closing-symbol" aria-hidden="true">✳</span>
+            <h2>Mirar<br />de nuevo.</h2>
+            <p>El archivo continúa cuando el libro, la inspección y la lectura encuentran su ritmo.</p>
+          </div>
+          <span class="closing-cta" aria-label="Continuar al archivo, demostración sin enlace">Continuar al archivo <span>↗</span></span>
+          <p class="folio-note">Demostración · destino aún no disponible</p>
+        </HerbariumPage>
+      </div>
+      <div class="mobile-gesture-surface" data-mobile-gesture-surface aria-hidden="true"></div>
+      <Magnifier />
+    </div>
+  </div>
+
+  <div class="book-controls" aria-label="Controles del herbario">
+    <button class="control-button" type="button" data-prev aria-label="Folio anterior">← <span>Anterior</span></button>
+    <div class="book-controls__middle">
+      <span class="page-status" data-status aria-live="polite">Folio 01 de 08</span>
+      <button class="inspect-button" type="button" data-inspect aria-pressed="false" aria-label="Activar modo inspección">⌕ <span>Inspeccionar</span></button>
+    </div>
+    <button class="control-button" type="button" data-next aria-label="Folio siguiente"><span>Siguiente</span> →</button>
+  </div>
+  <p class="interaction-hint" data-hint>Arrastrá una página o usá los controles. En móvil, deslizá el folio.</p>
+</section>
+
+<script>
+  import { initBook } from '../../scripts/book';
+  initBook();
+</script>

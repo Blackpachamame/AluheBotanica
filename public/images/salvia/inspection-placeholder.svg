@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="Retícula provisional para probar aumento">
+  <defs>
+    <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse"><path d="M38 0H0V38" fill="none" stroke="#c3b9a7" stroke-width="1"/></pattern>
+  </defs>
+  <rect width="800" height="1000" fill="#e9e1d3"/>
+  <rect x="40" y="40" width="720" height="920" fill="#f2ebdd" stroke="#a99b83" stroke-width="2"/>
+  <rect x="76" y="158" width="648" height="692" fill="url(#grid)"/>
+  <path d="M76 158h648v692H76z" fill="none" stroke="#a98450" stroke-width="2"/>
+  <circle cx="293" cy="372" r="113" fill="#e1ddcc" fill-opacity=".8" stroke="#6c7258" stroke-width="3"/>
+  <circle cx="504" cy="595" r="128" fill="#e2d5c1" fill-opacity=".8" stroke="#98513e" stroke-width="3"/>
+  <path d="M180 372h226M293 259v226M376 595h256M504 467v256" stroke="#a98450" stroke-width="2"/>
+  <circle cx="293" cy="372" r="28" fill="none" stroke="#6c7258" stroke-width="3"/>
+  <circle cx="504" cy="595" r="39" fill="none" stroke="#98513e" stroke-width="3"/>
+  <text x="76" y="126" fill="#6c7258" font-family="Georgia,serif" font-size="24" letter-spacing="5">ESTUDIO DE INSPECCIÓN</text>
+  <text x="81" y="902" fill="#686154" font-family="Georgia,serif" font-size="22">Retícula para evaluar lente y posición</text>
+  <text x="81" y="934" fill="#98513e" font-family="Georgia,serif" font-size="17" letter-spacing="3">PLACEHOLDER · NO BOTÁNICO</text>
+</svg>

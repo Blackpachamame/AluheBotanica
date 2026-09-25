@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="Área provisional para espécimen">
+  <rect width="800" height="1000" fill="#e5dccb"/>
+  <rect x="32" y="32" width="736" height="936" fill="#f1e9dc" stroke="#b8ab95" stroke-width="2"/>
+  <path d="M70 85h125M70 85v125M730 85H605M730 85v125M70 915h125M70 915V790M730 915H605M730 915V790" fill="none" stroke="#a98450" stroke-width="2"/>
+  <path d="M400 195v610M95 500h610" stroke="#c9bea9" stroke-width="1" stroke-dasharray="3 9"/>
+  <circle cx="400" cy="500" r="126" fill="none" stroke="#a6a491" stroke-width="2"/>
+  <circle cx="400" cy="500" r="92" fill="none" stroke="#b9b7a4" stroke-width="1"/>
+  <path d="M350 500h100M400 450v100" stroke="#9b9d88" stroke-width="2"/>
+  <text x="400" y="265" text-anchor="middle" fill="#6c7258" font-family="Georgia,serif" font-size="22" letter-spacing="6">ESPÉCIMEN</text>
+  <text x="400" y="745" text-anchor="middle" fill="#686154" font-family="Georgia,serif" font-size="24">Imagen pendiente de validación</text>
+  <text x="400" y="784" text-anchor="middle" fill="#98513e" font-family="Georgia,serif" font-size="18" letter-spacing="3">PLACEHOLDER · NO BOTÁNICO</text>
+  <path d="M98 878h604" stroke="#b8ab95"/>
+  <text x="102" y="907" fill="#6c7258" font-family="Georgia,serif" font-size="17" letter-spacing="2">ALUHE / HERBARIO I</text>
+  <text x="702" y="907" text-anchor="end" fill="#6c7258" font-family="Georgia,serif" font-size="17">001</text>
+</svg>
