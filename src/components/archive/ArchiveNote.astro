@@ -1,0 +1,43 @@
+---
+interface Props {
+  id: string;
+  number: string;
+  title: string;
+  summary: string;
+  icon: 'taxonomy' | 'habitat' | 'uses' | 'evidence' | 'precautions';
+  class?: string;
+}
+
+const { id, number, title, summary, icon, class: className = '' } = Astro.props;
+---
+
+<button
+  class={`archive-note archive-note--${icon} ${className}`}
+  type="button"
+  data-archive-note={id}
+  aria-pressed="false"
+  aria-controls="archive-readout"
+>
+  <span class="archive-note__number">{number}</span>
+  <span class="archive-note__rule" aria-hidden="true"></span>
+  <span class="archive-note__icon" aria-hidden="true">
+    {icon === 'taxonomy' && (
+      <svg viewBox="0 0 48 48"><path d="M15 39c8-7 13-18 18-31M17 31c-5-6-4-12-1-17 7 1 11 6 10 12M25 23c2-7 7-11 13-12 1 7-2 12-9 15"/><path d="M13 41c8-2 15-1 22 2"/></svg>
+    )}
+    {icon === 'habitat' && (
+      <svg viewBox="0 0 48 48"><path d="M5 36 17 21l7 8 6-10 13 17M10 36h32"/><path d="M35 13v12M31 18h8M33 14l2-5 2 5"/></svg>
+    )}
+    {icon === 'uses' && (
+      <svg viewBox="0 0 48 48"><path d="M11 20h26c-1 10-6 16-13 16S12 30 11 20Z"/><path d="M8 17h32M20 36v5h8v-5M30 7 18 21"/><circle cx="32" cy="8" r="3"/></svg>
+    )}
+    {icon === 'evidence' && (
+      <svg viewBox="0 0 48 48"><path d="M19 7h10M22 7v11L12 37c-1 2 1 4 3 4h18c3 0 4-2 3-4L26 18V7"/><path d="M16 31h16M20 25h8"/></svg>
+    )}
+    {icon === 'precautions' && (
+      <svg viewBox="0 0 48 48"><path d="m24 7 18 33H6L24 7Z"/><path d="M24 18v11M24 35h.01"/></svg>
+    )}
+  </span>
+  <span class="archive-note__title">{title}</span>
+  <span class="archive-note__summary">{summary}</span>
+  <span class="archive-note__arrow" aria-hidden="true">→</span>
+</button>

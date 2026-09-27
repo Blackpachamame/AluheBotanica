@@ -6,9 +6,10 @@ interface Props {
 }
 
 const { number, variant = '', label } = Astro.props;
+const leafSide = Number(number) % 2 === 1 ? 'left' : 'right';
 ---
 
-<article class={`folio ${variant}`} aria-label={label}>
+<article class={`folio ${variant}`} aria-label={label} data-leaf-side={leafSide}>
   <div class="folio__content"><slot /></div>
   <span class="folio__number" aria-hidden="true">{number}</span>
 </article>

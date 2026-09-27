@@ -1,0 +1,134 @@
+---
+import ArchiveNote from './ArchiveNote.astro';
+import Magnifier from '../herbarium/Magnifier.astro';
+---
+
+<section class="archive-study" data-archive-study aria-labelledby="archive-title">
+  <header class="archive-header">
+    <a class="archive-brand" href="#archive-title" aria-label="Aluhe, Botánica Oculta">
+      <span>ALUHE</span>
+      <small>Botánica Oculta</small>
+    </a>
+    <nav class="archive-nav" aria-label="Navegación del estudio visual">
+      <a href="#archive-board">Archivo</a>
+      <a href="#archive-readout">Registro</a>
+      <a href="/herbarium/">Herbario</a>
+    </nav>
+    <span class="archive-study-mark">Estudio visual 03</span>
+  </header>
+
+  <div class="archive-hero">
+    <div class="archive-intro">
+      <p class="archive-eyebrow">Conocimiento vegetal <span>·</span> Archivo de investigación</p>
+      <h1 id="archive-title">Plantas.<br />Historias ocultas.<br />Futuros posibles.</h1>
+      <p class="archive-lead">ALUHE explora las plantas como un archivo vivo: identidad, contexto, usos tradicionales, evidencia y precauciones reunidos sin perder la huella de quien observa, compara y vuelve a mirar.</p>
+      <a class="archive-primary" href="#archive-readout">Explorar registro <span>→</span></a>
+      <div class="archive-volume" aria-label="Volumen actual">
+        <span>01 / 17</span>
+        <i aria-hidden="true"></i>
+        <div><strong>Volumen I</strong><em>Salvia officinalis L.</em></div>
+      </div>
+    </div>
+
+    <div class="archive-board-wrap">
+      <div class="archive-board" id="archive-board" data-archive-board>
+        <div class="archive-shadow-leaf archive-shadow-leaf--one" aria-hidden="true"></div>
+        <div class="archive-shadow-leaf archive-shadow-leaf--two" aria-hidden="true"></div>
+
+        <div class="archive-paper archive-paper--map" aria-hidden="true">
+          <img src="/images/archive/field-map.svg" alt="" />
+        </div>
+
+        <div class="archive-paper archive-paper--field" aria-hidden="true">
+          <span class="archive-field-index">REG. 001</span>
+          <p>Notas de gabinete</p>
+          <p class="archive-hand">Comparar lámina, registro y fuente antes de incorporar nuevos datos.</p>
+          <span class="archive-field-rule"></span>
+        </div>
+
+        <figure class="archive-paper archive-paper--detail" aria-label="Detalle de la lámina histórica">
+          <img src="/images/salvia/salvia-kohler-floral-detail.webp" alt="Detalle floral recortado de la lámina histórica de Salvia officinalis" />
+          <figcaption>PL. 038 · detalle</figcaption>
+        </figure>
+
+        <div class="archive-tape archive-tape--detail" aria-hidden="true"></div>
+        <div class="archive-tape archive-tape--map" aria-hidden="true"></div>
+
+        <figure class="archive-paper archive-sheet-main inspectable" data-magnify-src="/images/salvia/salvia-kohler-plate-38-web.webp">
+          <div class="archive-sheet-head">
+            <span>ALUHE / ARCHIVO VISUAL</span>
+            <span>PL. 038</span>
+          </div>
+          <div class="archive-sheet-title">
+            <strong>Salvia <i>officinalis</i></strong>
+            <span>Lamiaceae · registro 001</span>
+          </div>
+          <div class="archive-sheet-image">
+            <img src="/images/salvia/salvia-kohler-plate-38-web.webp" width="1600" height="2284" alt="Lámina 38 de Köhler’s Medizinal-Pflanzen con Salvia officinalis" />
+          </div>
+          <figcaption>
+            <span>Köhler · 1887</span>
+            <span>Biodiversity Heritage Library · dominio público</span>
+          </figcaption>
+        </figure>
+
+        <div class="archive-vellum archive-vellum--identity" aria-hidden="true">
+          <span>HERBARIO I</span>
+          <strong>001</strong>
+          <i>Salvia officinalis L.</i>
+        </div>
+
+        <div class="archive-slip archive-slip--source" aria-hidden="true">
+          <span>FUENTE</span>
+          <b>Köhler · 1887</b>
+          <i>Pl. 038</i>
+        </div>
+
+        <p class="archive-handnote archive-handnote--main" aria-hidden="true">
+          comparar lámina<br />registro · fuente
+        </p>
+
+        <ArchiveNote id="taxonomy" number="01" title="Taxonomía" summary="Identidad, nomenclatura y familia." icon="taxonomy" class="archive-note--pos-taxonomy" />
+        <ArchiveNote id="habitat" number="02" title="Hábitat" summary="Distribución, ambiente y convivencia." icon="habitat" class="archive-note--pos-habitat" />
+        <ArchiveNote id="uses" number="03" title="Usos tradicionales" summary="Registro histórico y contexto cultural." icon="uses" class="archive-note--pos-uses" />
+        <ArchiveNote id="evidence" number="04" title="Evidencia" summary="Fuentes, estudios y nivel de respaldo." icon="evidence" class="archive-note--pos-evidence" />
+        <ArchiveNote id="precautions" number="05" title="Precauciones" summary="Riesgos, interacciones y uso responsable." icon="precautions" class="archive-note--pos-precautions" />
+
+        <div class="archive-seal" aria-hidden="true"><span>ALUHE</span><b>Herbario</b><i>001</i></div>
+
+        <div class="archive-magnifier archive-magnifier--visual" aria-hidden="true">
+          <span class="archive-magnifier__glass"></span>
+        </div>
+
+        <Magnifier />
+      </div>
+      <div class="archive-board-meta">
+        <p class="archive-board-caption">Papeles de trabajo · lámina histórica · notas de lectura <span>↗</span></p>
+        <button class="archive-inspect-control" type="button" data-archive-inspect aria-pressed="false" aria-label="Activar inspección de la lámina">
+          <span aria-hidden="true">⌕</span><span data-inspect-label>Inspeccionar lámina</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <aside class="archive-readout" id="archive-readout" data-archive-readout aria-live="polite">
+    <div class="archive-readout__index" data-readout-index>01</div>
+    <div class="archive-readout__body">
+      <span data-readout-kicker>Taxonomía</span>
+      <h2 data-readout-title>Identidad y clasificación</h2>
+      <p data-readout-copy>La ficha completa reunirá nombre científico, autoridad, familia y criterios de identificación. En este estudio visual todavía no incorporamos información botánica no verificada.</p>
+    </div>
+    <span class="archive-readout__status">Registro en preparación</span>
+  </aside>
+
+  <footer class="archive-footer">
+    <div><span class="archive-footer__icon">⌁</span><p><strong>Plantas</strong><span>Especies, registros y procedencia.</span></p></div>
+    <div><span class="archive-footer__icon">□</span><p><strong>Volumen I</strong><span>17 especies rescatadas del proyecto original.</span></p></div>
+    <div><span class="archive-footer__icon">✦</span><p><strong>El proyecto</strong><span>Un archivo botánico construido por capas.</span></p></div>
+  </footer>
+</section>
+
+<script>
+  import { initArchiveStudy } from '../../scripts/archive';
+  initArchiveStudy();
+</script>

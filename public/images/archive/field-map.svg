@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520">
+  <rect width="720" height="520" fill="#e5dac6"/>
+  <g fill="none" stroke="#786f5e" stroke-opacity=".25" stroke-width="2">
+    <path d="M-25 91c116-75 191 43 301-20s176-82 285-14 139 40 202 4"/>
+    <path d="M-10 137c120-66 202 50 303-8s176-70 276-5 137 42 190 18"/>
+    <path d="M-20 192c83-47 170-9 230 32s155 23 224-35 160-70 245 4 119 62 151 44"/>
+    <path d="M-16 246c94-24 158 12 227 50s151 9 222-47 156-52 231 20 101 58 150 49"/>
+    <path d="M-24 310c99-11 167 25 229 67s143 17 217-39 158-41 226 31 108 45 172 33"/>
+    <path d="M-6 373c105-3 162 39 226 72s146 7 206-33 142-38 212 20 118 44 185 29"/>
+  </g>
+  <g fill="none" stroke="#8f503e" stroke-opacity=".55" stroke-width="3" stroke-dasharray="8 10">
+    <path d="M92 420c87-117 156-147 255-158 95-11 152-102 272-143"/>
+  </g>
+  <g fill="#8f503e"><circle cx="95" cy="418" r="6"/><circle cx="347" cy="262" r="6"/><circle cx="619" cy="119" r="6"/></g>
+  <g fill="#5f6651" font-family="Georgia, serif" font-size="20" letter-spacing="4">
+    <text x="48" y="55">MAPA DE TRABAJO</text>
+    <text x="48" y="88" font-size="13" letter-spacing="2">SIN GEOREFERENCIA · REGISTRO 001</text>
+  </g>
+  <g transform="translate(594 386)" fill="none" stroke="#5f6651" stroke-width="2" opacity=".65">
+    <circle cx="48" cy="48" r="43"/><path d="M48 5v86M5 48h86M48 13l10 25 25 10-25 10-10 25-10-25-25-10 25-10 10-25Z"/>
+  </g>
+</svg>

@@ -1,6 +1,34 @@
-# Aluhe · Interaction Study 01 — The Herbarium
+# Aluhe · Visual Studies
 
-Estudio editorial de cuatro pliegos sobre *Salvia officinalis*, con una lámina histórica real, lupa y lectura de un folio por pantalla en móvil. El espécimen prensado y sus datos de recolección siguen pendientes.
+Prototipos editoriales de **Aluhe — Botánica Oculta** construidos con Astro + TypeScript.
+
+## Hero Study 01 — Archivo Vivo
+
+La ruta `/studies/hero/` contiene el estudio aislado del futuro hero de la Home.
+
+Decisiones congeladas del prototipo:
+
+- arquitectura editorial clara, aproximadamente 42/58 en desktop;
+- una sola pieza botánica protagonista;
+- máximo tres papeles/enlaces HTML reales: Taxonomía, Hábitat y Evidencia;
+- nada de hotspots atados a coordenadas internas de una imagen raster;
+- tablet y mobile se recomponen como diseños propios, no como el collage desktop encogido;
+- decoración lateral limitada a dos motivos botánicos translúcidos;
+- botón principal con acabado de pincelada/papel pintado;
+- animación sin dependencias nuevas: SVG por `stroke-dasharray`, revelado de la lámina y entrada suave de papeles con `IntersectionObserver` + CSS;
+- `prefers-reduced-motion` elimina la coreografía y muestra el contenido directamente.
+
+Criterio perceptual de validación: mirar 1440, 768 y 390 px a tamaño normal y responder sin matices si cada variante parece diseñada deliberadamente para ese ancho. Si parece una versión encogida o estirada de otra, el estudio no pasa.
+
+## Archivo de investigación preservado
+
+La ruta `/` sigue usando `ResearchArchive.astro`.
+
+## Herbario de gabinete preservado
+
+La ruta `/herbarium/` conserva el estudio con `page-flip` 2.0.7.
+
+## Desarrollo
 
 ```sh
 bun install
@@ -9,16 +37,10 @@ bun run check
 bun run build
 ```
 
-`page-flip` está fijado en la versión 2.0.7. Su integración vive en `src/scripts/book.ts` y la pequeña declaración local de su API usada está en `src/types/page-flip.d.ts`, porque el paquete no publica tipos. La lupa vive en `src/scripts/magnifier.ts`.
+No se añadieron dependencias para Hero Study 01.
 
-## Interacción del prototipo
+### Correcciones 01.1
 
-En desktop, StPageFlip recibe el mouse directamente y gestiona el arrastre del libro. En móvil (≤640 px), una superficie transparente separada clasifica gestos táctiles con Pointer Events: deja el desplazamiento vertical al navegador y pide a StPageFlip que anime los swipes horizontales mediante `flipNext()` o `flipPrev()`.
-
-La interacción táctil se validó mediante emulación touch de Chrome; todavía no se probó en un dispositivo físico.
-
-## Iteration 02 — Salvia Visual Study
-
-La lámina 38 de *Köhler’s Medizinal-Pflanzen* (1887) procede de la [Biodiversity Heritage Library](https://www.biodiversitylibrary.org/page/303638), a través del ejemplar de la Missouri Botanical Garden. [Wikimedia Commons la identifica como dominio público](https://commons.wikimedia.org/wiki/File:K%C3%B6hler%27s_Medizinal-Pflanzen_in_naturgetreuen_Abbildungen_mit_kurz_erl%C3%A4uterndem_Texte_(Plate_38)_BHL303638.jpg). El JPEG original se conserva en `public/images/salvia/salvia-kohler-plate-38.jpg`; el libro usa una versión WebP reducida y un recorte de la misma lámina para el último pliego.
-
-El sistema visual mantiene la paleta y las tipografías de la primera iteración. Usa papeles marfil discretos, una voz editorial para títulos y otra de archivo para números, procedencia y etiquetas. El espécimen de Salvia permanece señalado como provisional; aún no hay ficha botánica completa ni destino funcional para «Continuar al archivo».
+- el reveal de la lámina ya no depende del porcentaje visible de la propia lámina: la escena coordina el revelado completo cuando entra al viewport;
+- las notas internas de proceso se retiraron del HTML visible y se reemplazaron por copy de producto;
+- el CTA usa una silueta de pincelada derivada de la referencia visual `btn-preview.png`, manteniendo texto y foco como HTML real.
