@@ -9,31 +9,24 @@ const { ctaHref = '#hero-study-scene' } = Astro.props;
   <div class="hero-study__ambient hero-study__ambient--left" aria-hidden="true"></div>
   <div class="hero-study__ambient hero-study__ambient--right" aria-hidden="true"></div>
 
-  <header class="hero-study__header">
+  <header class="hero-study__header site-shell">
     <a class="hero-study__brand" href="#hero-study-title" aria-label="Aluhe, Botánica Oculta">
       <span>ALUHE</span>
       <small>Botánica Oculta</small>
     </a>
-    <nav class="hero-study__nav" aria-label="Navegación del prototipo">
-      <a href="#hero-study-scene">Archivo</a>
+    <nav class="hero-study__nav" aria-label="Navegación principal">
+      <a href="/archivo/">Archivo</a>
       <a href="/herbarium/">Herbario</a>
-      <a href="#hero-study-title">Registro</a>
+      <a href="/acerca/">Acerca</a>
     </nav>
   </header>
 
-  <div class="hero-study__layout">
+  <div class="hero-study__layout site-shell">
     <div class="hero-study__copy" data-reveal="copy">
-      <p class="hero-study__eyebrow">Conocimiento vegetal <span>·</span> archivo vivo</p>
       <h1 id="hero-study-title">Plantas.<br />Historias ocultas.<br />Futuros posibles.</h1>
       <p class="hero-study__lead">ALUHE reúne especies, historias y evidencias para observar el mundo vegetal con más atención. Un archivo para descubrir cómo nombramos, habitamos y comprendemos las plantas.</p>
       <div class="hero-study__actions">
         <a class="paint-button" href={ctaHref}><span>Explorar archivo</span><b aria-hidden="true">→</b></a>
-        <span class="hero-study__scroll-hint"><i aria-hidden="true">↓</i> Desplazá para explorar</span>
-      </div>
-      <div class="hero-study__volume" aria-label="Registro destacado">
-        <span>01 / 17</span>
-        <i aria-hidden="true"></i>
-        <div><strong>Volumen I</strong><em>Salvia officinalis L.</em></div>
       </div>
     </div>
 
@@ -41,12 +34,6 @@ const { ctaHref = '#hero-study-scene' } = Astro.props;
       <div class="hero-study__paper-stack hero-study__paper-stack--back-3" data-reveal="stack" style="--reveal-order: 1" aria-hidden="true"></div>
       <div class="hero-study__paper-stack hero-study__paper-stack--back-2" data-reveal="stack" style="--reveal-order: 2" aria-hidden="true"></div>
       <div class="hero-study__paper-stack hero-study__paper-stack--back-1" data-reveal="stack" style="--reveal-order: 3" aria-hidden="true"></div>
-
-      <aside class="hero-study__field-note" data-reveal="note" style="--reveal-order: 1" aria-label="Nota de campo sobre Salvia officinalis">
-        <span>Salvia officinalis L.</span>
-        <span>Lamiaceae</span>
-        <small>Conocida desde la antigüedad por sus usos tradicionales y culinarios.</small>
-      </aside>
 
       <figure class="hero-study__sheet" data-reveal="sheet">
         <div class="hero-study__specimen" data-reveal="plate" data-inspect-image>
@@ -60,7 +47,7 @@ const { ctaHref = '#hero-study-scene' } = Astro.props;
         <div class="hero-study__tape" aria-hidden="true"></div>
       </figure>
 
-      <a class="hero-paper-link hero-paper-link--taxonomy" href="/herbarium/#taxonomia" data-reveal="note" style="--reveal-order:2">
+      <a class="hero-paper-link hero-paper-link--taxonomy" href="/archivo/salvia-officinalis/#taxonomia" data-reveal="note" style="--reveal-order:2">
         <span class="hero-paper-link__index">
           <span class="hero-paper-link__number">01</span>
           <span class="hero-paper-link__rule" aria-hidden="true"></span>
@@ -76,7 +63,7 @@ const { ctaHref = '#hero-study-scene' } = Astro.props;
         <b aria-hidden="true">→</b>
       </a>
 
-      <a class="hero-paper-link hero-paper-link--habitat" href="/herbarium/#habitat" data-reveal="note" style="--reveal-order:3">
+      <a class="hero-paper-link hero-paper-link--habitat" href="/archivo/salvia-officinalis/#habitat" data-reveal="note" style="--reveal-order:3">
         <span class="hero-paper-link__index">
           <span class="hero-paper-link__number">02</span>
           <span class="hero-paper-link__rule" aria-hidden="true"></span>
@@ -94,7 +81,7 @@ const { ctaHref = '#hero-study-scene' } = Astro.props;
         <b aria-hidden="true">→</b>
       </a>
 
-      <a class="hero-paper-link hero-paper-link--evidence" href="/herbarium/#evidencia" data-reveal="note" style="--reveal-order:4">
+      <a class="hero-paper-link hero-paper-link--evidence" href="/archivo/salvia-officinalis/#evidencia" data-reveal="note" style="--reveal-order:4">
         <span class="hero-paper-link__index">
           <span class="hero-paper-link__number">03</span>
           <span class="hero-paper-link__rule" aria-hidden="true"></span>

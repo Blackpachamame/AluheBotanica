@@ -311,3 +311,9 @@
     transition: none !important;
   }
 }
+
+/* Home Study 10 — align section to the same outer shell as navbar and Hero */
+.explore-section__inner.site-shell {
+  width: min(calc(100% - (var(--page-gutter) * 2)), var(--page-max));
+  margin-inline: auto;
+}

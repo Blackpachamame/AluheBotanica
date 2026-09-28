@@ -14,4 +14,6 @@
   --line: #bcb2a1;
   --display: 'Libre Caslon Display', Georgia, serif;
   --text: 'Source Serif 4', Georgia, serif;
+  --page-max: 1440px;
+  --page-gutter: clamp(14px, 4vw, 64px);
 }

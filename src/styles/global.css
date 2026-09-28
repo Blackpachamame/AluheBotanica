@@ -5,3 +5,8 @@ button { font: inherit; }
 button:focus-visible { outline: 2px solid var(--oxide); outline-offset: 4px; }
 img { display: block; max-width: 100%; }
 ::selection { background: #d9c8a4; color: var(--ink); }
+
+.site-shell {
+  width: min(calc(100% - (var(--page-gutter) * 2)), var(--page-max));
+  margin-inline: auto;
+}

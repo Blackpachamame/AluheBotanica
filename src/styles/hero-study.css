@@ -671,3 +671,76 @@
   .paint-button b,
   .hero-paper-link { transition: none !important; }
 }
+
+/* Home Study 10 — shared shell + Hero cleanup */
+.hero-study__header.site-shell,
+.hero-study__layout.site-shell {
+  width: min(calc(100% - (var(--page-gutter) * 2)), var(--page-max));
+  margin-inline: auto;
+}
+
+.hero-study__copy {
+  padding-left: 0;
+}
+
+.hero-study__copy h1 {
+  font-weight: 500;
+}
+
+.hero-study__actions {
+  gap: 0;
+}
+
+.hero-paper-link--evidence {
+  left: 4.2%;
+  right: auto;
+  top: 55%;
+  bottom: auto;
+  width: 27%;
+  transform: rotate(-1.1deg);
+}
+
+.hero-paper-link--evidence:hover {
+  transform: rotate(-.35deg) translateY(-3px);
+}
+
+.hero-study__inspect {
+  right: 1.2%;
+  bottom: 6.6%;
+  min-width: 27%;
+  min-height: 44px;
+  justify-content: center;
+  padding: 9px 15px 9px 13px;
+}
+
+@media (max-width: 980px) {
+  .hero-paper-link--evidence {
+    left: 2%;
+    right: auto;
+    top: 55%;
+    bottom: auto;
+    width: 28%;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero-study__copy {
+    padding-left: 0;
+  }
+
+  .hero-study__inspect {
+    position: relative;
+    inset: auto;
+    min-width: 0;
+    min-height: 38px;
+    justify-content: flex-start;
+    padding: 8px 12px 8px 11px;
+  }
+
+  .hero-paper-link--evidence {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    transform: rotate(-.2deg);
+  }
+}
