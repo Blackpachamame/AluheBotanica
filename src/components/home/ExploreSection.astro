@@ -1,0 +1,72 @@
+<section class="explore-section" id="explore" data-explore-section aria-labelledby="explore-title">
+  <div class="explore-section__inner">
+    <header class="explore-section__header" data-explore-reveal>
+      <div class="explore-section__heading-row">
+        <h2 id="explore-title">Qué podés explorar</h2>
+        <span class="explore-section__rule" aria-hidden="true"></span>
+      </div>
+      <p>Diferentes formas de entrar al mundo vegetal</p>
+    </header>
+
+    <div class="explore-section__grid">
+      <a class="explore-card" href="/herbarium/" data-explore-reveal style="--explore-order: 1; --paper-mask: url('/textures/explore-paper-mask-1.png'); --paper-tilt: -.12deg">
+        <svg class="explore-card__icon" viewBox="0 0 72 72" aria-hidden="true">
+          <path d="M18 58c5-21 15-36 38-46-1 12-5 23-12 31-7 8-16 13-26 15Z" />
+          <path d="M20 55c10-11 20-21 32-34" />
+          <path d="M27 47c-5-1-9-3-12-7M35 39c-1-6 0-12 2-17M43 31c5 0 9-2 13-5" />
+        </svg>
+        <div class="explore-card__copy">
+          <h3>Plantas</h3>
+          <p>Explorá especies, registros y procedencia.</p>
+        </div>
+        <span class="explore-card__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="explore-card" href="#explore" data-explore-reveal style="--explore-order: 2; --paper-mask: url('/textures/explore-paper-mask-2.png'); --paper-tilt: .1deg">
+        <svg class="explore-card__icon explore-card__icon--book" viewBox="0 0 72 72" aria-hidden="true">
+          <path d="M10 17c9-3 17-2 26 4v36c-9-6-17-7-26-4V17Z" />
+          <path d="M62 17c-9-3-17-2-26 4v36c9-6 17-7 26-4V17Z" />
+          <path d="M36 21v36" />
+          <path d="M16 25c5-1 10 0 14 3M16 33c5-1 10 0 14 3M42 28c4-3 9-4 14-3M42 36c4-3 9-4 14-3" opacity=".58" />
+        </svg>
+        <div class="explore-card__copy">
+          <h3>Historias</h3>
+          <p>Relatos, culturas y saberes tradicionales.</p>
+        </div>
+        <span class="explore-card__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="explore-card" href="#explore" data-explore-reveal style="--explore-order: 3; --paper-mask: url('/textures/explore-paper-mask-3.png'); --paper-tilt: -.08deg">
+        <svg class="explore-card__icon explore-card__icon--flask" viewBox="0 0 72 72" aria-hidden="true">
+          <path d="M28 10h16M31 10v17L17 52c-3 5 0 8 6 8h26c6 0 9-3 6-8L41 27V10" />
+          <path d="M22 47c6-4 11-3 15 0 4 3 9 4 14 0" />
+          <circle cx="28" cy="51" r="1.5" /><circle cx="38" cy="54" r="1.8" /><circle cx="45" cy="50" r="1.2" />
+        </svg>
+        <div class="explore-card__copy">
+          <h3>Evidencia</h3>
+          <p>Estudios, hallazgos y conocimiento actual.</p>
+        </div>
+        <span class="explore-card__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="explore-card" href="#explore" data-explore-reveal style="--explore-order: 4; --paper-mask: url('/textures/explore-paper-mask-4.png'); --paper-tilt: .09deg">
+        <svg class="explore-card__icon explore-card__icon--terrain" viewBox="0 0 82 72" aria-hidden="true">
+          <path d="M5 51c8-8 14-17 22-28l12 13 10-18 27 33" />
+          <path d="M7 57h69" />
+          <path d="M16 57v-9m7 9V43m8 14v-7M58 57V35m7 22V41m7 16V47" />
+          <path d="M58 35c-4 4-7 8-8 13M58 39c4-4 8-6 13-6M65 42c-4 3-7 7-8 11M72 47c3-3 6-4 9-4" />
+        </svg>
+        <div class="explore-card__copy">
+          <h3>Territorios</h3>
+          <p>Ecosistemas, geografía y conservación.</p>
+        </div>
+        <span class="explore-card__arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { initExploreSection } from '../../scripts/explore-section';
+  initExploreSection();
+</script>

@@ -1,7 +1,10 @@
 ---
-import BotanicalLineArt from './BotanicalLineArt.astro';
----
+interface Props {
+  ctaHref?: string;
+}
 
+const { ctaHref = '#hero-study-scene' } = Astro.props;
+---
 <section class="hero-study" data-hero-study aria-labelledby="hero-study-title">
   <div class="hero-study__ambient hero-study__ambient--left" aria-hidden="true"></div>
   <div class="hero-study__ambient hero-study__ambient--right" aria-hidden="true"></div>
@@ -24,7 +27,7 @@ import BotanicalLineArt from './BotanicalLineArt.astro';
       <h1 id="hero-study-title">Plantas.<br />Historias ocultas.<br />Futuros posibles.</h1>
       <p class="hero-study__lead">ALUHE reúne especies, historias y evidencias para observar el mundo vegetal con más atención. Un archivo para descubrir cómo nombramos, habitamos y comprendemos las plantas.</p>
       <div class="hero-study__actions">
-        <a class="paint-button" href="#hero-study-scene"><span>Explorar archivo</span><b aria-hidden="true">→</b></a>
+        <a class="paint-button" href={ctaHref}><span>Explorar archivo</span><b aria-hidden="true">→</b></a>
         <span class="hero-study__scroll-hint"><i aria-hidden="true">↓</i> Desplazá para explorar</span>
       </div>
       <div class="hero-study__volume" aria-label="Registro destacado">
@@ -35,17 +38,19 @@ import BotanicalLineArt from './BotanicalLineArt.astro';
     </div>
 
     <div class="hero-study__visual" id="hero-study-scene" data-reveal="scene">
-      <div class="hero-study__sketch" aria-hidden="true">
-        <BotanicalLineArt />
-      </div>
-
       <div class="hero-study__paper-stack hero-study__paper-stack--back-3" data-reveal="stack" style="--reveal-order: 1" aria-hidden="true"></div>
       <div class="hero-study__paper-stack hero-study__paper-stack--back-2" data-reveal="stack" style="--reveal-order: 2" aria-hidden="true"></div>
       <div class="hero-study__paper-stack hero-study__paper-stack--back-1" data-reveal="stack" style="--reveal-order: 3" aria-hidden="true"></div>
 
+      <aside class="hero-study__field-note" data-reveal="note" style="--reveal-order: 1" aria-label="Nota de campo sobre Salvia officinalis">
+        <span>Salvia officinalis L.</span>
+        <span>Lamiaceae</span>
+        <small>Conocida desde la antigüedad por sus usos tradicionales y culinarios.</small>
+      </aside>
+
       <figure class="hero-study__sheet" data-reveal="sheet">
-        <div class="hero-study__specimen" data-reveal="plate">
-          <img src="/images/salvia/salvia-kohler-plate-38-web.webp" width="1600" height="2284" alt="Ilustración histórica de Salvia officinalis de Köhler, 1887" />
+        <div class="hero-study__specimen" data-reveal="plate" data-inspect-image>
+          <img src="/images/salvia/salvia-kohler-cutout.webp" width="1600" height="2284" alt="Ilustración histórica de Salvia officinalis de Köhler, 1887" />
         </div>
         <figcaption class="hero-study__notation">
           <span>Salvia officinalis L.</span>
@@ -55,38 +60,65 @@ import BotanicalLineArt from './BotanicalLineArt.astro';
         <div class="hero-study__tape" aria-hidden="true"></div>
       </figure>
 
-      <a class="hero-paper-link hero-paper-link--taxonomy" href="/herbarium/#taxonomia" data-reveal="note" style="--reveal-order:1">
-        <span class="hero-paper-link__number">01</span>
-        <span class="hero-paper-link__rule" aria-hidden="true"></span>
-        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 36c12-1 22-9 28-26-16 3-27 12-28 26Zm3-3c8-7 14-12 22-18M21 27c-3-1-5-3-7-5M28 21c0-3-1-5-2-7"/></svg>
+      <a class="hero-paper-link hero-paper-link--taxonomy" href="/herbarium/#taxonomia" data-reveal="note" style="--reveal-order:2">
+        <span class="hero-paper-link__index">
+          <span class="hero-paper-link__number">01</span>
+          <span class="hero-paper-link__rule" aria-hidden="true"></span>
+        </span>
+        <svg class="hero-paper-link__icon" viewBox="0 0 52 52" aria-hidden="true">
+          <path d="M11.2 39.5C13.7 26.4 21.7 16.8 39.4 9.8c-.7 7.6-2.8 14.1-6.8 19.1-4.6 5.8-11.4 9.4-21.4 10.6Z" />
+          <path d="M13.8 36.8c6.9-6.8 13.1-12.4 22.2-21" />
+          <path d="M18.5 32.2c-3.9-.7-6.9-2.1-9-4.1M23.8 27c-1.2-4.1-1.2-7.8-.2-11M29.3 21.9c3 .1 5.7-.7 8.2-2.2" />
+          <path d="M35.7 13.2c1.8 2 2.8 4.1 3 6.4" opacity=".62" />
+        </svg>
         <strong>Taxonomía</strong>
         <em>Clasificación, nombre científico y familia.</em>
         <b aria-hidden="true">→</b>
       </a>
 
-      <a class="hero-paper-link hero-paper-link--habitat" href="/herbarium/#habitat" data-reveal="note" style="--reveal-order:2">
-        <span class="hero-paper-link__number">02</span>
-        <span class="hero-paper-link__rule" aria-hidden="true"></span>
-        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="m5 34 12-16 8 9 7-12 11 19H5Zm5 0v-9m27 9v-8M9 21c5-5 9-7 13-8"/></svg>
+      <a class="hero-paper-link hero-paper-link--habitat" href="/herbarium/#habitat" data-reveal="note" style="--reveal-order:3">
+        <span class="hero-paper-link__index">
+          <span class="hero-paper-link__number">02</span>
+          <span class="hero-paper-link__rule" aria-hidden="true"></span>
+        </span>
+        <svg class="hero-paper-link__icon" viewBox="0 0 58 52" aria-hidden="true">
+          <path d="M3.5 39.5h51" />
+          <path d="M5.5 34.8 17.2 21l7.5 7.1 7.6-12.7 12 14.7" />
+          <path d="m17.2 21 4.2 3.8 3.3-3.5 3.6 2.7 4-8.6 4.7 5.8" opacity=".72" />
+          <path d="M43.9 39.5V20.9M39.6 39.5V26.7M47.8 39.5V27.3" />
+          <path d="M43.9 21c-2.6 2.3-4.5 4.2-5.6 7.2M43.9 24.2c2.4-2 4.3-3 6.7-3.4M39.6 27c-2.6 2.2-4.3 4.2-5.2 6.8M47.8 27.6c2-1.7 3.7-2.5 5.6-2.7" />
+          <path d="M8 39.5v-5.8m3.8 5.8v-8.2m3.7 8.2v-4.7" opacity=".7" />
+        </svg>
         <strong>Hábitat</strong>
         <em>Dónde crece, cómo se adapta y con quién convive.</em>
         <b aria-hidden="true">→</b>
       </a>
 
-      <a class="hero-paper-link hero-paper-link--evidence" href="/herbarium/#evidencia" data-reveal="note" style="--reveal-order:3">
-        <span class="hero-paper-link__number">04</span>
-        <span class="hero-paper-link__rule" aria-hidden="true"></span>
-        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M20 6h8M22 6v12L12 37c-2 4 0 6 4 6h16c4 0 6-2 4-6L26 18V6M17 31h14M19 26h10"/></svg>
+      <a class="hero-paper-link hero-paper-link--evidence" href="/herbarium/#evidencia" data-reveal="note" style="--reveal-order:4">
+        <span class="hero-paper-link__index">
+          <span class="hero-paper-link__number">03</span>
+          <span class="hero-paper-link__rule" aria-hidden="true"></span>
+        </span>
+        <svg class="hero-paper-link__icon" viewBox="0 0 52 52" aria-hidden="true">
+          <path d="M19 8.5h14M22.2 8.5v12.3L12.4 39c-1.8 3.4.2 5 3.6 5h20c3.4 0 5.4-1.6 3.6-5l-9.8-18.2V8.5" />
+          <path d="M16.1 34.2c4.1-2.6 7.7-1.8 10.5.2 3.1 2.2 6.4 2.5 10.4-.2" />
+          <path d="M20.7 28.4h10.6" opacity=".64" />
+          <circle cx="20.2" cy="37.6" r="1" /><circle cx="26.3" cy="40.2" r="1.15" /><circle cx="31.8" cy="36.9" r=".85" />
+          <path d="M24.5 13.2h5" opacity=".68" />
+        </svg>
         <strong>Evidencia</strong>
         <em>Estudios, hallazgos y conocimiento actual.</em>
         <b aria-hidden="true">→</b>
       </a>
 
-      <div class="hero-study__magnifier" aria-hidden="true">
+      <div class="hero-study__magnifier" data-hero-lens aria-hidden="true">
         <div class="hero-study__magnifier-glass"></div>
       </div>
 
-      <span class="hero-study__stamp" aria-hidden="true">HERBARIO<br /><b>ALUHE</b></span>
+      <button class="hero-study__inspect" type="button" data-inspect-toggle aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="5.5" /><path d="m14.6 14.6 4.4 4.4" /></svg>
+        <span data-inspect-label>Inspeccionar lámina</span>
+      </button>
     </div>
   </div>
 </section>

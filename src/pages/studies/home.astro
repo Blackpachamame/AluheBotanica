@@ -1,0 +1,24 @@
+---
+import HeroStudy from '../../components/hero/HeroStudy.astro';
+import ExploreSection from '../../components/home/ExploreSection.astro';
+import '../../styles/tokens.css';
+import '../../styles/global.css';
+import '../../styles/hero-study.css';
+import '../../styles/explore-section.css';
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="data:," />
+    <title>Aluhe · Home Study 01</title>
+    <meta name="description" content="Prototipo progresivo de la Home editorial de Aluhe, Archivo Vivo." />
+  </head>
+  <body>
+    <main>
+      <HeroStudy ctaHref="#explore" />
+      <ExploreSection />
+    </main>
+  </body>
+</html>
