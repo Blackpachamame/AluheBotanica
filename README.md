@@ -68,7 +68,7 @@ La nueva capa de contenido se inicia de forma deliberadamente simple:
 
 Las fichas permanecen en `draft` y **no están conectadas todavía a `/archivo/` ni a la Home**. Una planta sólo pasa a `published` después de investigación avanzada, auditoría editorial y aprobación humana explícita.
 
-`salvia.md` ya contiene la **primera redacción editorial completa** construida a partir del dossier piloto de investigación; sigue en `draft` hasta revisar tono, profundidad y selección de contenido antes de diseñar su ficha visual. `menta.md` se mantiene como fixture estructural de rango género.
+`salvia.md` y `menta.md` contienen redacciones editoriales completas construidas a partir de sus dossiers de investigación. Ambas siguen en `draft`; completar investigación o diseño no cambia por sí solo el estado editorial.
 
 ## Salvia visual study
 
@@ -83,12 +83,25 @@ Las fichas permanecen en `draft` y **no están conectadas todavía a `/archivo/`
 
 Tercera pasada de precisión sobre `/studies/salvia/`:
 
-- los números de sección pasan encima del título y ganan escala en desktop;
+- los encabezados de sección se simplifican y dejan la numeración únicamente en los índices de navegación;
 - `Rasgos de lectura` elimina los bordes exteriores, reduce el vacío respecto de la foto y aumenta la presencia del rótulo; en mobile se alinea con el gutter real del contenido;
 - los créditos bajo fotografías se apilan también en desktop para mejorar lectura;
-- Luz, Suelo, Riego y Poda ganan peso tipográfico y números más visibles;
+- Luz, Suelo, Riego y Poda ganan peso tipográfico y se elimina la numeración decorativa de esos bloques;
 - se elimina la línea ornamental superior del principio editorial;
 - `Libre Caslon Display` se reemplaza globalmente por `Newsreader`, una serif editorial diseñada para lectura en pantalla, mientras `Source Serif 4` permanece como cuerpo;
 - el cambio tipográfico afecta de forma centralizada a Home, ficha, Archivo y Herbario a través de `--display`.
 
 Para esta iteración se reemplaza una dependencia tipográfica: `@fontsource/libre-caslon-display` por `@fontsource-variable/newsreader`. No se añade ninguna librería de UI ni dependencia funcional nueva.
+
+
+## Menta visual study
+
+- `/studies/menta/` aplica el sistema visual validado con Salvia a una unidad editorial de rango género.
+- La apertura conserva “Menta” como nombre editorial y muestra `Mentha L.` como identidad botánica principal.
+- La apertura usa una adaptación editorial transparente local de la lámina histórica de *Mentha spicata* para evitar el papel oscuro de la digitalización original; la fuente histórica y su dominio público quedan registrados en el manifest.
+- `Mentha × piperita`, `Mentha spicata` y `Mentha pulegium` se presentan como taxones relacionados, nunca como sinónimos entre sí ni como representación total del género.
+- Evidencia utiliza `Mentha × piperita` de forma explícita cuando los ensayos corresponden a peppermint.
+- Precauciones separa visualmente `Mentha pulegium`/pennyroyal para evitar generalizar su perfil toxicológico al género.
+- `src/data/menta-media.json` registra taxón mostrado, autor, licencia, rol editorial y `licenseVerifiedAt` para cada asset.
+- `docs/MENTA_MEDIA_V1.md` documenta el set visual y su regla de uso.
+- La ruta sigue siendo un study y no publica `/archivo/menta/` ni cambia `status: draft`.

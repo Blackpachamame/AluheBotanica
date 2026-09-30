@@ -1,0 +1,247 @@
+.menta-hero__plate--transparent {
+  width: min(100%, 610px);
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  clip-path: none;
+  transform: rotate(.35deg);
+}
+
+.menta-hero__plate--transparent::before {
+  display: none;
+}
+
+.menta-study-page .menta-hero__plate--transparent img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 20px rgba(51,43,31,.08));
+}
+
+.menta-hero__plate figcaption {
+  width: min(88%, 520px);
+  margin: 2px auto 0;
+  padding: 8px 5px 2px;
+  border-top: 0;
+}
+
+.menta-plate-note {
+  margin: 8px 5px 0;
+  color: #7c7466;
+  font-size: 9px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.menta-taxa {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 48px;
+  border-block: 1px solid rgba(58,53,45,.15);
+}
+
+.menta-taxa article {
+  min-height: 205px;
+  padding: 26px 24px 28px 0;
+}
+
+.menta-taxa article + article {
+  padding-left: 24px;
+  border-left: 1px solid rgba(58,53,45,.13);
+}
+
+.menta-taxa article > span {
+  display: block;
+  margin-bottom: 12px;
+  color: #8b765c;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.menta-taxa h3 {
+  margin: 0 0 13px;
+  font-family: var(--display);
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.menta-taxa p {
+  margin: 0;
+  color: #5a5449;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.menta-taxa__alert {
+  background: linear-gradient(90deg, rgba(152,81,62,.03), rgba(152,81,62,.07));
+}
+
+.menta-taxa__alert > span,
+.menta-taxa__alert h3 {
+  color: var(--oxide);
+}
+
+.menta-context-photo img {
+  aspect-ratio: 3 / 4;
+  object-position: center 36%;
+}
+
+.menta-principle {
+  max-width: 760px;
+}
+
+.menta-principle p {
+  max-width: 24em;
+}
+
+.menta-materials {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  align-items: center;
+  margin: 42px 0 12px;
+  padding: 24px 0;
+  border-block: 1px solid rgba(58,53,45,.14);
+}
+
+.menta-materials div {
+  min-width: 0;
+}
+
+.menta-materials span,
+.menta-materials small {
+  display: block;
+}
+
+.menta-materials span {
+  font-family: var(--display);
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.menta-materials small {
+  margin-top: 3px;
+  color: #7d7466;
+  font-size: 9px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.menta-materials i {
+  display: none;
+}
+
+.menta-materials-note {
+  margin-top: 0 !important;
+  color: #71695d !important;
+  font-size: 13px !important;
+  font-style: italic;
+}
+
+.menta-peppermint-photo {
+  margin-bottom: 38px;
+}
+
+.menta-peppermint-photo img {
+  aspect-ratio: 16 / 8.2;
+  object-position: center 44%;
+}
+
+.menta-safety-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr);
+  gap: 34px;
+  align-items: start;
+}
+
+.menta-safety-grid .safety-card {
+  margin-top: 28px;
+}
+
+.menta-pulegium-copy {
+  padding-top: 8px;
+}
+
+.menta-pulegium-copy h3 {
+  margin: 12px 0 14px;
+  font-family: var(--display);
+  font-size: 31px;
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.menta-pulegium-copy p:not(.plant-label) {
+  color: #4e493f;
+  font-size: 15px;
+  line-height: 1.68;
+}
+
+.menta-pulegium-photo {
+  margin: 28px 0 0;
+  position: sticky;
+  top: calc(var(--plant-anchor-offset) + 22px);
+}
+
+.menta-pulegium-photo img {
+  aspect-ratio: 3 / 4;
+  object-position: 52% center;
+}
+
+@media (max-width: 860px) {
+  .menta-taxa {
+    grid-template-columns: 1fr 1fr;
+  }
+  .menta-taxa article:nth-child(3) {
+    grid-column: 1 / -1;
+    padding-left: 0;
+    border-left: 0;
+    border-top: 1px solid rgba(58,53,45,.13);
+  }
+  .menta-safety-grid {
+    grid-template-columns: 1fr;
+  }
+  .menta-pulegium-photo {
+    position: static;
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 620px) {
+  .menta-study-page .plant-hero h1 {
+    font-size: clamp(66px, 23vw, 92px);
+  }
+  .menta-taxa {
+    grid-template-columns: 1fr;
+  }
+  .menta-taxa article,
+  .menta-taxa article + article,
+  .menta-taxa article:nth-child(3) {
+    min-height: 0;
+    padding: 22px 0 24px;
+    border-left: 0;
+    border-top: 1px solid rgba(58,53,45,.12);
+  }
+  .menta-taxa article:first-child {
+    border-top: 0;
+  }
+  .menta-materials {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 18px;
+  }
+  .menta-materials div {
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(58,53,45,.10);
+  }
+  .menta-materials span {
+    font-size: 21px;
+  }
+  .menta-pulegium-copy h3 {
+    font-size: 28px;
+  }
+  .menta-pulegium-photo {
+    max-width: none;
+  }
+}

@@ -1,0 +1,334 @@
+---
+import '../../styles/tokens.css';
+import '../../styles/global.css';
+import '../../styles/salvia-study.css';
+import '../../styles/menta-study.css';
+import media from '../../data/menta-media.json';
+
+const [plate, peppermintPhoto, spicataPhoto, pulegiumPhoto] = media.items;
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="data:," />
+    <title>Menta · Mentha L. · Ficha Study · Aluhe</title>
+    <meta name="description" content="Estudio visual de la ficha editorial de Menta, Mentha L., para Aluhe Botánica Oculta." />
+  </head>
+  <body class="plant-study-page menta-study-page">
+    <header class="plant-topbar">
+      <div class="site-shell plant-topbar__inner">
+        <a class="plant-brand" href="/studies/home/" aria-label="Volver al estudio de Home de Aluhe">
+          <span>ALUHE</span>
+          <small>Botánica Oculta</small>
+        </a>
+        <nav class="plant-topbar__nav" aria-label="Navegación principal">
+          <a href="/archivo/">Archivo</a>
+          <a href="/herbarium/">Herbario</a>
+          <a href="/acerca/">Acerca</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="plant-hero menta-hero" aria-labelledby="plant-title">
+        <div class="plant-hero__ambient" aria-hidden="true"></div>
+        <div class="site-shell plant-hero__grid">
+          <div class="plant-hero__copy">
+            <div class="plant-kicker"><span>Ficha 02</span><i></i><span>Lamiaceae</span></div>
+            <h1 id="plant-title">Menta</h1>
+            <p class="plant-latin"><em>Mentha</em> L. · género</p>
+            <p class="plant-deck">“Menta” no nombra una única especie. Esta ficha conserva el nombre como puerta de entrada a <em>Mentha</em>, un género donde especies e híbridos comparten aromas y nombres comunes, pero no necesariamente la misma evidencia ni el mismo perfil de seguridad.</p>
+
+            <dl class="plant-facts" aria-label="Datos rápidos de Mentha L.">
+              <div><dt>Rango</dt><dd>Género</dd></div>
+              <div><dt>Familia</dt><dd>Lamiaceae</dd></div>
+              <div><dt>Unidad</dt><dd>Menta</dd></div>
+              <div><dt>Archivo</dt><dd>Revisión 2026</dd></div>
+            </dl>
+
+            <div class="plant-status" role="note">
+              <span>Borrador editorial</span>
+              <p>Study visual. La ficha todavía no forma parte del Archivo público.</p>
+            </div>
+          </div>
+
+          <figure class="plant-hero__plate menta-hero__plate menta-hero__plate--transparent">
+            <img src={plate.assetUrl} alt={plate.alt} width="1086" height="1448" />
+            <figcaption>
+              <span><em>Mentha spicata</em></span>
+              <small>Basada en Thomé · 1885 · fuente en dominio público</small>
+            </figcaption>
+            <p class="menta-plate-note">Una especie del género; no una representación diagnóstica de todo <em>Mentha</em>.</p>
+          </figure>
+        </div>
+      </section>
+
+      <div class="plant-section-nav" data-plant-section-nav>
+        <details class="plant-section-nav__details site-shell">
+          <summary>
+            <span class="plant-section-nav__eyebrow">En esta ficha</span>
+            <strong data-current-section>Taxonomía</strong>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5.5 7.5 4.5 4.5 4.5-4.5" /></svg>
+          </summary>
+          <nav aria-label="Navegación rápida de la ficha">
+            <a href="#taxonomia"><span>01</span>Taxonomía</a>
+            <a href="#habitat"><span>02</span>Hábitat</a>
+            <a href="#cultivo"><span>03</span>Cultivo</a>
+            <a href="#usos"><span>04</span>Usos</a>
+            <a href="#evidencia"><span>05</span>Evidencia</a>
+            <a href="#precauciones"><span>06</span>Precauciones</a>
+            <a href="#fuentes"><span>07</span>Fuentes</a>
+          </nav>
+        </details>
+      </div>
+
+      <div class="plant-reading site-shell">
+        <aside class="plant-index" aria-label="Índice de la ficha">
+          <div class="plant-index__inner">
+            <p>En esta ficha</p>
+            <nav>
+              <a href="#taxonomia"><span>01</span>Taxonomía</a>
+              <a href="#habitat"><span>02</span>Hábitat</a>
+              <a href="#cultivo"><span>03</span>Cultivo</a>
+              <a href="#usos"><span>04</span>Usos</a>
+              <a href="#evidencia"><span>05</span>Evidencia</a>
+              <a href="#precauciones"><span>06</span>Precauciones</a>
+              <a href="#fuentes"><span>07</span>Fuentes</a>
+            </nav>
+            <div class="plant-index__rule"></div>
+            <small>En esta ficha, “menta” es un nombre editorial para el género <em>Mentha</em> L. Cuando un dato pertenece a una especie o híbrido, se lo nombra de forma explícita.</small>
+          </div>
+        </aside>
+
+        <article class="plant-article">
+          <section class="plant-section plant-section--opening" id="taxonomia">
+            <header class="plant-section__header"><h2>Taxonomía</h2></header>
+
+            <p class="plant-lead"><em>Mentha</em> L. es un género aceptado de Lamiaceae. La antigua ficha de “Menta” puede resolverse con seguridad a nivel de género, pero no corresponde convertirla retrospectivamente en una ficha de <em>Mentha × piperita</em>. <a class="source-ref" href="#source-1" aria-label="Ver fuente 1">[1]</a><a class="source-ref" href="#source-2" aria-label="Ver fuente 2">[2]</a></p>
+
+            <div class="plant-copy-grid">
+              <div>
+                <p>En términos generales, las mentas son hierbas aromáticas, con frecuencia perennes y rizomatosas, de hojas opuestas y flores tubulares. Pero el porte, la forma foliar y las inflorescencias varían entre especies e híbridos.</p>
+                <p>La identificación dentro del género puede ser difícil por hibridación, poliploidía y plasticidad morfológica. Una fotografía informal o un nombre común pueden orientar, pero no bastan para imponer una especie concreta.</p>
+              </div>
+              <aside class="plant-note plant-note--field">
+                <span>Nota de archivo</span>
+                <p>El nombre “menta” aparece aplicado a varios taxones incluso en fuentes argentinas. El nombre común no funciona como identificador de especie.</p>
+              </aside>
+            </div>
+
+            <div class="menta-taxa" aria-label="Taxones relacionados importantes en esta ficha">
+              <article>
+                <span>Híbrido</span>
+                <h3><em>Mentha × piperita</em></h3>
+                <p>Peppermint. Es el taxón detrás de buena parte de la literatura regulatoria y clínica sobre hoja y aceite esencial.</p>
+              </article>
+              <article>
+                <span>Especie</span>
+                <h3><em>Mentha spicata</em></h3>
+                <p>Una menta ampliamente cultivada y culinaria. Ayuda a mostrar que el nombre común abarca más de un taxón.</p>
+              </article>
+              <article class="menta-taxa__alert">
+                <span>Especie · seguridad</span>
+                <h3><em>Mentha pulegium</em></h3>
+                <p>Pennyroyal o poleo. Su aceite tiene un perfil toxicológico particular y nunca debe confundirse con peppermint.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="plant-section" id="habitat">
+            <header class="plant-section__header"><h2>Hábitat</h2></header>
+            <p class="plant-lead">A diferencia de la descripción antigua, <em>Mentha</em> no es un género exclusivamente mediterráneo ni centroasiático. Considerado como conjunto, Kew caracteriza su rango nativo como cosmopolita. <a class="source-ref" href="#source-1" aria-label="Ver fuente 1">[1]</a></p>
+
+            <div class="plant-copy-grid">
+              <div>
+                <p>Ese dato reúne especies con historias biogeográficas diferentes. Muchas mentas se asocian con ambientes húmedos o suelos capaces de conservar humedad, pero el hábitat preciso debe leerse taxón por taxón.</p>
+                <p>En Argentina y el Cono Sur también conviene separar cultivada, introducida y naturalizada. El SIB documenta registros regionales de distintos <em>Mentha</em>, mientras que Kew distingue la distribución de cada especie o híbrido. <a class="source-ref" href="#source-4" aria-label="Ver fuente 4">[4]</a></p>
+              </div>
+              <figure class="plant-photo plant-photo--context menta-context-photo">
+                <img src={spicataPhoto.assetUrl} alt={spicataPhoto.alt} loading="lazy" referrerpolicy="no-referrer" />
+                <figcaption>
+                  <p><em>Mentha spicata</em> en flor: un ejemplo real del género, no una imagen de “la menta” en abstracto.</p>
+                  <small>Foto: AnRo0002 / Wikimedia Commons · CC0 1.0</small>
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section class="plant-section" id="cultivo">
+            <header class="plant-section__header"><h2>Cultivo</h2></header>
+            <p class="plant-lead">Muchas mentas cultivadas comparten un núcleo de manejo sencillo, pero propagación, rusticidad y velocidad de expansión dependen del taxón.</p>
+
+            <div class="plant-cultivation-grid">
+              <article><h3>Humedad</h3><p>Suelos capaces de conservar humedad, evitando el encharcamiento persistente y adaptando el riego al clima.</p></article>
+              <article><h3>Luz</h3><p>Pleno sol o luz parcial según especie, cultivar y condiciones locales. No existe una prohibición general del sol.</p></article>
+              <article><h3>Expansión</h3><p>Muchas mentas avanzan por rizomas. La maceta o los límites físicos pueden servir para controlar taxones expansivos.</p></article>
+              <article><h3>Propagación</h3><p>División, rizomas y esquejes son frecuentes. En híbridos como <em>M. × piperita</em> la propagación vegetativa cobra especial importancia.</p></article>
+            </div>
+            <p>La nueva ficha descarta reglas heredadas demasiado rígidas: tamaños universales de maceta, plazos exactos de enraizamiento o la idea de que cualquier ramita sirve. Para Aluhe, el método depende de la identidad de la planta y de las condiciones de cultivo. <a class="source-ref" href="#source-5" aria-label="Ver fuente 5">[5]</a></p>
+          </section>
+
+          <section class="plant-section" id="usos">
+            <header class="plant-section__header"><h2>Usos tradicionales</h2></header>
+            <p class="plant-lead">Diversas especies e híbridos de <em>Mentha</em> forman parte de cocinas, huertas y tradiciones herbales. El punto crítico es no tratar todos esos usos como si correspondieran al mismo taxón o a la misma preparación.</p>
+
+            <div class="plant-principle menta-principle">
+              <span>Principio editorial de Aluhe</span>
+              <p>Mismo nombre común no significa mismo material, misma evidencia ni misma seguridad.</p>
+            </div>
+
+            <p><em>Mentha × piperita</em> tiene un historial particularmente bien documentado. La EMA reconoce el uso tradicional de su hoja para el alivio sintomático de dispepsia y flatulencia, sobre la base de uso prolongado. Eso no demuestra que todo <em>Mentha</em> tenga eficacia digestiva clínica. <a class="source-ref" href="#source-6" aria-label="Ver fuente 6">[6]</a></p>
+
+            <div class="menta-materials" aria-label="Materiales que no deben intercambiarse">
+              <div><span>Hoja</span><small>material vegetal</small></div>
+              <i aria-hidden="true">→</i>
+              <div><span>Infusión</span><small>extracción acuosa</small></div>
+              <i aria-hidden="true">→</i>
+              <div><span>Aceite esencial</span><small>destilado concentrado</small></div>
+              <i aria-hidden="true">→</i>
+              <div><span>Mentol</span><small>constituyente aislado</small></div>
+            </div>
+            <p class="menta-materials-note">La secuencia no significa equivalencia: muestra justamente por qué una evidencia o un riesgo no debe trasladarse de un material al siguiente. <a class="source-ref" href="#source-7" aria-label="Ver fuente 7">[7]</a></p>
+          </section>
+
+          <section class="plant-section plant-section--evidence" id="evidencia">
+            <header class="plant-section__header"><h2>Evidencia</h2></header>
+            <p class="plant-lead">En una ficha de género, la evidencia clínica no puede presentarse como una lista de “propiedades de la menta”. Cada resultado necesita taxón, material, vía, población y desenlace.</p>
+
+            <figure class="plant-photo plant-photo--wide menta-peppermint-photo">
+              <img src={peppermintPhoto.assetUrl} alt={peppermintPhoto.alt} loading="lazy" referrerpolicy="no-referrer" />
+              <figcaption>
+                <p><em>Mentha × piperita</em>: el híbrido al que corresponde gran parte de la evidencia clínica destacada abajo.</p>
+                <small>Foto: H. Zell / Wikimedia Commons · CC BY-SA 3.0</small>
+              </figcaption>
+            </figure>
+
+            <div class="evidence-principle">
+              <p class="plant-label">Cómo leer esta sección</p>
+              <strong>Taxón + material + preparación + vía + población + resultado.</strong>
+              <p>Si cambia una de esas capas, cambia también lo que podemos concluir.</p>
+            </div>
+
+            <div class="evidence-list">
+              <article>
+                <span class="evidence-list__number">01</span>
+                <div><h3>SII en adultos</h3><p>El aceite de <em>M. × piperita</em> en formulaciones orales específicas es el área con más evidencia. Un metaanálisis de 2022 reunió 10 ensayos y 1.030 participantes, con resultados favorables frente a placebo pero calidad de evidencia muy baja y más eventos adversos. <a class="source-ref" href="#source-9" aria-label="Ver fuente 9">[9]</a></p><small>Lectura Aluhe: una señal clínica acotada, no “la menta trata enfermedades intestinales”.</small></div>
+              </article>
+              <article>
+                <span class="evidence-list__number">02</span>
+                <div><h3>Resultados no uniformes</h3><p>El ensayo PERSUADE no mostró superioridad significativa en sus desenlaces primarios, y un ensayo pediátrico de 2026 con 228 participantes no encontró superioridad frente a placebo en el desenlace principal. <a class="source-ref" href="#source-10" aria-label="Ver fuente 10">[10]</a><a class="source-ref" href="#source-11" aria-label="Ver fuente 11">[11]</a></p><small>Lectura Aluhe: el promedio de varios estudios no elimina la incertidumbre ni permite extrapolar de adultos a niños.</small></div>
+              </article>
+              <article>
+                <span class="evidence-list__number">03</span>
+                <div><h3>Náuseas</h3><p>Existen estudios puntuales con preparaciones de peppermint, incluido un ensayo de 84 mujeres sometidas a quimioterapia. El conjunto sigue siendo limitado y heterogéneo. <a class="source-ref" href="#source-12" aria-label="Ver fuente 12">[12]</a></p><small>Lectura Aluhe: línea de investigación; no antiemético general.</small></div>
+              </article>
+              <article>
+                <span class="evidence-list__number">04</span>
+                <div><h3>Mentol y “descongestión”</h3><p>El mentol puede aumentar la sensación de flujo y frescor sin reducir necesariamente la resistencia nasal. Ese efecto sensorial no equivale a descongestión objetiva. <a class="source-ref" href="#source-13" aria-label="Ver fuente 13">[13]</a></p><small>Lectura Aluhe: percepción y fisiología no son la misma variable.</small></div>
+              </article>
+              <article>
+                <span class="evidence-list__number">05</span>
+                <div><h3>Cognición y laboratorio</h3><p>Hay estudios experimentales sobre aroma de peppermint y actividad antimicrobiana <em>in vitro</em>, pero no justifican afirmar que consumir menta mejora el rendimiento mental o trata infecciones.</p><small>Lectura Aluhe: interés experimental no es eficacia terapéutica.</small></div>
+              </article>
+            </div>
+
+            <div class="evidence-boundary">
+              <span>No trasladar</span>
+              <p>Resultados con aceite de peppermint no se convierten en propiedades de una infusión, de otra especie del género o de toda “menta”. Tampoco se extrapolan a Crohn, colitis, gripe, asma, anticoagulación o “mejor circulación”.</p>
+            </div>
+          </section>
+
+          <section class="plant-section plant-section--safety menta-safety" id="precauciones">
+            <header class="plant-section__header"><h2>Precauciones</h2></header>
+            <p class="plant-lead">No existe un único perfil de seguridad de “la menta”. Los riesgos dependen del taxón, el material, la concentración, la vía y la población.</p>
+
+            <div class="menta-safety-grid">
+              <div>
+                <div class="safety-card">
+                  <div class="safety-card__mark" aria-hidden="true">!</div>
+                  <div><h3>Hoja y aceite de peppermint</h3><p>La hoja de <em>M. × piperita</em> puede agravar reflujo o acidez y requiere precaución en trastornos biliares. Para embarazo y lactancia, la EMA indica que la seguridad medicinal no está establecida de forma suficiente. El aceite esencial es un material diferente y concentrado, con efectos adversos y restricciones propias. <a class="source-ref" href="#source-6" aria-label="Ver fuente 6">[6]</a><a class="source-ref" href="#source-8" aria-label="Ver fuente 8">[8]</a></p></div>
+                </div>
+
+                <div class="menta-pulegium-copy">
+                  <p class="plant-label">Caso que no debe generalizarse</p>
+                  <h3><em>Mentha pulegium</em> y el aceite de poleo</h3>
+                  <p>El aceite de pennyroyal o poleo tiene una historia documentada de intoxicaciones graves asociadas a pulegona y mentofurano, con daño hepático y neurológico y casos mortales. Una serie clínica documentó cuatro intoxicaciones, incluida una muerte. También se describieron dos lactantes gravemente intoxicados después de recibir “té de menta” que contenía pennyroyal; uno murió. <a class="source-ref" href="#source-14" aria-label="Ver fuente 14">[14]</a><a class="source-ref" href="#source-15" aria-label="Ver fuente 15">[15]</a></p>
+                  <p>Estos casos no significan que todo <em>Mentha</em> sea tóxico. Demuestran por qué un nombre común sin identificación suficiente puede ocultar perfiles de seguridad muy distintos.</p>
+                </div>
+              </div>
+
+              <figure class="plant-photo menta-pulegium-photo">
+                <img src={pulegiumPhoto.assetUrl} alt={pulegiumPhoto.alt} loading="lazy" referrerpolicy="no-referrer" />
+                <figcaption>
+                  <p><em>Mentha pulegium</em>, taxón tratado aquí exclusivamente en su propio contexto.</p>
+                  <small>Foto: EmirDzaferovic / Wikimedia Commons · CC0 1.0</small>
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section class="plant-section" id="fuentes">
+            <header class="plant-section__header"><h2>Fuentes</h2></header>
+            <p class="plant-lead">La ficha fue redactada a partir de una revisión realizada hasta septiembre de 2026. “Menta” no se utilizó como sinónimo automático de <em>Mentha × piperita</em>.</p>
+
+            <div class="source-groups">
+              <div>
+                <h3>Botánica, distribución y cultivo</h3>
+                <ol>
+                  <li id="source-1"><strong>Kew — Plants of the World Online.</strong> <em>Mentha</em> L. Backbone taxonómico y distribución del género.</li>
+                  <li id="source-2"><strong>International Plant Names Index.</strong> <em>Mentha</em> L. Nomenclatura, publicación y autoría.</li>
+                  <li id="source-3"><strong>Kew — POWO.</strong> <em>Mentha × piperita</em>, <em>M. spicata</em> y <em>M. pulegium</em>. Conceptos relacionados y distribución.</li>
+                  <li id="source-4"><strong>Sistema de Información de Biodiversidad — APN, Argentina.</strong> Registros regionales y usos del nombre común “menta”.</li>
+                  <li id="source-5"><strong>Royal Horticultural Society.</strong> Guías de cultivo y propagación de <em>Mentha</em>.</li>
+                </ol>
+              </div>
+              <div>
+                <h3>Uso herbal, evidencia y seguridad</h3>
+                <ol start="6">
+                  <li id="source-6"><strong>EMA / HMPC.</strong> <em>Mentha × piperita</em> L., folium, Revision 1.</li>
+                  <li id="source-7"><strong>EMA / HMPC.</strong> Assessment report de hoja y aceite de peppermint; diferencias entre materiales, preparaciones y vías.</li>
+                  <li id="source-8"><strong>NCCIH.</strong> Peppermint Oil. Síntesis institucional sobre usos investigados y seguridad.</li>
+                  <li id="source-9"><strong>Ingrosso M. R. et al. (2022).</strong> Metaanálisis de peppermint oil en SII. DOI 10.1111/apt.17179.</li>
+                  <li id="source-10"><strong>Weerts Z. Z. R. M. et al. (2020).</strong> PERSUADE. DOI 10.1053/j.gastro.2019.08.026.</li>
+                  <li id="source-11"><strong>Vermeijden N. K. et al. (2026).</strong> Ensayo pediátrico, DOI 10.1016/j.cgh.2026.01.014.</li>
+                  <li id="source-12"><strong>Ensayo controlado en quimioterapia (2020).</strong> Peppermint y náuseas/vómitos. PMID 33118401.</li>
+                  <li id="source-13"><strong>Eccles R., Jones A. S. (1983).</strong> Mentol y resistencia nasal. DOI 10.1017/S002221510009486X.</li>
+                  <li id="source-14"><strong>Anderson I. B. et al. (1996).</strong> Pennyroyal toxicity. DOI 10.7326/0003-4819-124-8-199604150-00004.</li>
+                  <li id="source-15"><strong>Multiple Organ Failure After Ingestion of Pennyroyal Oil From Herbal Tea in Two Infants (1996).</strong> DOI 10.1542/peds.98.5.944.</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="visual-credits">
+              <p class="plant-label">Créditos visuales</p>
+              <ul>
+                {media.items.map((item) => (
+                  <li>
+                    <a href={item.sourcePage} target="_blank" rel="noreferrer"><em>{item.displayTaxon}</em> · {item.creator}</a>
+                    <small>{item.license} · licencia verificada {item.licenseVerifiedAt}</small>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+          </section>
+
+          <footer class="plant-closing">
+            <div>
+              <p>Ficha 02 · Menta</p>
+              <strong>Archivo en preparación.</strong>
+            </div>
+            <a href="/studies/home/">← Volver al estudio de Home</a>
+          </footer>
+        </article>
+      </div>
+    </main>
+
+    <script>
+      import { initPlantSectionNav } from '../../scripts/plant-section-nav';
+      initPlantSectionNav();
+    </script>
+  </body>
+</html>
