@@ -1,4 +1,4 @@
-@import '@fontsource/libre-caslon-display/400.css';
+@import '@fontsource-variable/newsreader';
 @import '@fontsource/source-serif-4/400.css';
 @import '@fontsource/source-serif-4/400-italic.css';
 @import '@fontsource/source-serif-4/600.css';
@@ -12,7 +12,7 @@
   --paper-light: #f8f3e8;
   --desk: #e8e2d7;
   --line: #bcb2a1;
-  --display: 'Libre Caslon Display', Georgia, serif;
+  --display: 'Newsreader Variable', 'Newsreader', Georgia, serif;
   --text: 'Source Serif 4', Georgia, serif;
   --page-max: 1440px;
   --page-gutter: clamp(14px, 4vw, 64px);

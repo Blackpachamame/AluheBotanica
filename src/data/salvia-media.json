@@ -1,0 +1,58 @@
+{
+  "taxon": "Salvia officinalis L.",
+  "reviewedAt": "2026-09-28",
+  "items": [
+    {
+      "id": "salvia-kohler-plate",
+      "role": "editorial-illustration",
+      "title": "Salvia officinalis — Köhler's Medizinal-Pflanzen",
+      "creator": "Walther Otto Müller",
+      "date": "1897",
+      "localPath": "/images/salvia/salvia-kohler-plate-38-web.webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Salvia_officinalis_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-126.jpg",
+      "license": "Public domain / Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "alt": "Lámina botánica histórica de Salvia officinalis con planta, flores, fruto y detalles anatómicos.",
+      "usageNote": "Pieza editorial e histórica. No se presenta como voucher ni como evidencia diagnóstica contemporánea."
+    },
+    {
+      "id": "salvia-field-photo",
+      "role": "documentary-main",
+      "title": "Garden Sage (Salvia officinalis), Marzling, Germany",
+      "creator": "Flocci Nivis (Livia Rasp)",
+      "date": "2026-06-14",
+      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/20260614_Salvia_officinalis_01.jpg",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:20260614_Salvia_officinalis_01.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "alt": "Salvia officinalis en flor creciendo en un cauce seco en Marzling, Alemania.",
+      "usageNote": "Fotografía documental principal de la planta real. Mantener crédito visible y señalar adaptaciones si se recorta o modifica."
+    },
+    {
+      "id": "salvia-leaf-detail",
+      "role": "documentary-detail",
+      "title": "Salvia officinalis — detalle de hoja",
+      "creator": "Plenuska",
+      "date": "2015-08-29",
+      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Der_echte_Salbei%2C_lat._Salvia_officinalis%2C_syn._Gartensalbei%2C_Edelsalbei_02.jpg/1280px-Der_echte_Salbei%2C_lat._Salvia_officinalis%2C_syn._Gartensalbei%2C_Edelsalbei_02.jpg",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Der_echte_Salbei,_lat._Salvia_officinalis,_syn._Gartensalbei,_Edelsalbei_02.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "alt": "Detalle cercano de una hoja gris verdosa de Salvia officinalis mostrando su superficie pubescente y marcada.",
+      "usageNote": "Detalle morfológico documental. Si se crea una versión derivada, conservar las obligaciones ShareAlike de la licencia."
+    },
+    {
+      "id": "salvia-habitus-context",
+      "role": "documentary-context",
+      "title": "Salvia officinalis — hábito, Dehesa Boyal de Puertollano",
+      "creator": "Javier martin",
+      "date": "2009-04-29",
+      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Salvia_officinalis_Habitus_DehesaBoyalPuertollano.jpg",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Salvia_officinalis_Habitus_DehesaBoyalPuertollano.jpg",
+      "license": "Public domain (PD-self)",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
+      "alt": "Mata de Salvia officinalis en flor fotografiada en la Dehesa Boyal de Puertollano, España.",
+      "usageNote": "Imagen contextual opcional para hábito o cultivo. No usar como demostración de rango nativo."
+    }
+  ]
+}

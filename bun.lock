@@ -5,7 +5,7 @@
     "": {
       "name": "aluhe-interaction-study-01",
       "dependencies": {
-        "@fontsource/libre-caslon-display": "^5.3.0",
+        "@fontsource-variable/newsreader": "^5.3.0",
         "@fontsource/source-serif-4": "^5.3.0",
         "astro": "^7.3.5",
         "page-flip": "2.0.7",
@@ -161,7 +161,7 @@
 
     "@esbuild/win32-x64": ["@esbuild/win32-x64@0.28.2", "", { "os": "win32", "cpu": "x64" }, "sha512-5ebpxr3nWMzrL/rnUI755Jkuee0bHL/Gq0WTF9lvcpv73wAp5eu8MfBUgWK9bhWvZjj7yX8etf/8tI8Ney695g=="],
 
-    "@fontsource/libre-caslon-display": ["@fontsource/libre-caslon-display@5.3.0", "", {}, "sha512-WZEyiWTKBoXHWHNfdFQcexxmUOQ22XpSK4ivzczY2AnSt/u8DfmzRpYX6eKwUaFjva5BhSbUUArmouHTDwSEFQ=="],
+    "@fontsource-variable/newsreader": ["@fontsource-variable/newsreader@5.3.0", "", {}, "sha512-rrzYi43qMpbzwuFtf9OkWH8sxAPVPcQQQEwXpPtwaKYeJ8yVg5aLs5kawmo1f2Q1t1M38TLmEKCkGVDsYwgdFw=="],
 
     "@fontsource/source-serif-4": ["@fontsource/source-serif-4@5.3.0", "", {}, "sha512-yQz8xmIgMzks8zQbpuca3UYtjxK798XCyQAGdDXmzBgvV7sdoK6d0YvE9F9kiYxORCEMRBgGZDZsSYcXj5KvwA=="],
 

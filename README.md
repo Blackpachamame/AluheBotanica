@@ -55,3 +55,40 @@ No se añadieron dependencias para Hero Study 01.
 - los tres papeles usan SVG inline propios, sin dependencia de iconos;
 - se añade `Inspeccionar lámina` como botón HTML real: activa/desactiva una lupa que sigue el puntero sobre la ilustración en desktop/tablet;
 - en mobile se conserva la composición vertical y se omiten nota lateral/lupa para no forzar el collage desktop.
+
+## Contenido botánico V1
+
+La nueva capa de contenido se inicia de forma deliberadamente simple:
+
+- política editorial: `docs/ALUHE_CONTENT_POLICY.md`;
+- formato mínimo de ficha: `docs/PLANT_FORMAT_V1.md`;
+- plantilla: `docs/templates/plant-v1.md`;
+- fixtures de validación: `src/content/plants/salvia.md` y `src/content/plants/menta.md`;
+- skill de contenido para agentes: `.agents/skills/aluhe-botanical-content/SKILL.md`.
+
+Las fichas permanecen en `draft` y **no están conectadas todavía a `/archivo/` ni a la Home**. Una planta sólo pasa a `published` después de investigación avanzada, auditoría editorial y aprobación humana explícita.
+
+`salvia.md` ya contiene la **primera redacción editorial completa** construida a partir del dossier piloto de investigación; sigue en `draft` hasta revisar tono, profundidad y selección de contenido antes de diseñar su ficha visual. `menta.md` se mantiene como fixture estructural de rango género.
+
+## Salvia visual study
+
+- `/studies/salvia/` contiene el primer estudio visual de una ficha completa de planta.
+- `src/data/salvia-media.json` registra autor, fuente, licencia, rol editorial y texto alternativo del set visual V1.
+- `docs/SALVIA_MEDIA_V1.md` documenta las decisiones y límites de uso de esas imágenes.
+- La ruta es un estudio: no publica todavía `/archivo/salvia-officinalis/` ni cambia `status: draft` de `src/content/plants/salvia.md`.
+- Las fotografías documentales del study se cargan desde Wikimedia Commons para preservar la procedencia original en esta iteración; antes de producción conviene decidir si se vendorizan/copían al repositorio respetando sus licencias.
+
+
+### Salvia Study 03
+
+Tercera pasada de precisión sobre `/studies/salvia/`:
+
+- los números de sección pasan encima del título y ganan escala en desktop;
+- `Rasgos de lectura` elimina los bordes exteriores, reduce el vacío respecto de la foto y aumenta la presencia del rótulo; en mobile se alinea con el gutter real del contenido;
+- los créditos bajo fotografías se apilan también en desktop para mejorar lectura;
+- Luz, Suelo, Riego y Poda ganan peso tipográfico y números más visibles;
+- se elimina la línea ornamental superior del principio editorial;
+- `Libre Caslon Display` se reemplaza globalmente por `Newsreader`, una serif editorial diseñada para lectura en pantalla, mientras `Source Serif 4` permanece como cuerpo;
+- el cambio tipográfico afecta de forma centralizada a Home, ficha, Archivo y Herbario a través de `--display`.
+
+Para esta iteración se reemplaza una dependencia tipográfica: `@fontsource/libre-caslon-display` por `@fontsource-variable/newsreader`. No se añade ninguna librería de UI ni dependencia funcional nueva.

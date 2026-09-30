@@ -1,0 +1,335 @@
+---
+import '../../styles/tokens.css';
+import '../../styles/global.css';
+import '../../styles/salvia-study.css';
+import media from '../../data/salvia-media.json';
+
+const [plate, fieldPhoto, leafPhoto, habitatPhoto] = media.items;
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="data:," />
+    <title>Salvia officinalis · Ficha Study · Aluhe</title>
+    <meta name="description" content="Estudio visual de la primera ficha editorial de Salvia officinalis para Aluhe Botánica Oculta." />
+  </head>
+  <body class="plant-study-page">
+    <header class="plant-topbar">
+      <div class="site-shell plant-topbar__inner">
+        <a class="plant-brand" href="/studies/home/" aria-label="Volver al estudio de Home de Aluhe">
+          <span>ALUHE</span>
+          <small>Botánica Oculta</small>
+        </a>
+        <nav class="plant-topbar__nav" aria-label="Navegación principal">
+          <a href="/archivo/">Archivo</a>
+          <a href="/herbarium/">Herbario</a>
+          <a href="/acerca/">Acerca</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="plant-hero" aria-labelledby="plant-title">
+        <div class="plant-hero__ambient" aria-hidden="true"></div>
+        <div class="site-shell plant-hero__grid">
+          <div class="plant-hero__copy">
+            <div class="plant-kicker"><span>Ficha 01</span><i></i><span>Lamiaceae</span></div>
+            <h1 id="plant-title">Salvia</h1>
+            <p class="plant-latin"><em>Salvia officinalis</em> L.</p>
+            <p class="plant-deck">Una aromática de jardín con siglos de historia culinaria y herbal. Esta ficha separa lo que sabemos de su identidad botánica, lo que pertenece a la tradición y lo que realmente ha sido estudiado en personas.</p>
+
+            <dl class="plant-facts" aria-label="Datos rápidos de Salvia officinalis">
+              <div><dt>Rango</dt><dd>Especie</dd></div>
+              <div><dt>Familia</dt><dd>Lamiaceae</dd></div>
+              <div><dt>Ciclo</dt><dd>Perenne</dd></div>
+              <div><dt>Archivo</dt><dd>Revisión 2026</dd></div>
+            </dl>
+
+            <div class="plant-status" role="note">
+              <span>Borrador editorial</span>
+              <p>Study visual. La ficha todavía no forma parte del Archivo público.</p>
+            </div>
+          </div>
+
+          <figure class="plant-hero__plate paper-object">
+            <span class="paper-tape paper-tape--top" aria-hidden="true"></span>
+            <img src={plate.localPath} alt={plate.alt} width="1024" height="1536" />
+            <figcaption>
+              <span>Lámina editorial</span>
+              <small>Walther Otto Müller · 1897 · Dominio público</small>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <div class="plant-section-nav" data-plant-section-nav>
+        <details class="plant-section-nav__details site-shell">
+          <summary>
+            <span class="plant-section-nav__eyebrow">En esta ficha</span>
+            <strong data-current-section>Taxonomía</strong>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5.5 7.5 4.5 4.5 4.5-4.5" /></svg>
+          </summary>
+          <nav aria-label="Navegación rápida de la ficha">
+            <a href="#taxonomia"><span>01</span>Taxonomía</a>
+            <a href="#habitat"><span>02</span>Hábitat</a>
+            <a href="#cultivo"><span>03</span>Cultivo</a>
+            <a href="#usos"><span>04</span>Usos</a>
+            <a href="#evidencia"><span>05</span>Evidencia</a>
+            <a href="#precauciones"><span>06</span>Precauciones</a>
+            <a href="#fuentes"><span>07</span>Fuentes</a>
+          </nav>
+        </details>
+      </div>
+
+      <div class="plant-reading site-shell">
+        <aside class="plant-index" aria-label="Índice de la ficha">
+          <div class="plant-index__inner">
+            <p>En esta ficha</p>
+            <nav>
+              <a href="#taxonomia"><span>01</span>Taxonomía</a>
+              <a href="#habitat"><span>02</span>Hábitat</a>
+              <a href="#cultivo"><span>03</span>Cultivo</a>
+              <a href="#usos"><span>04</span>Usos</a>
+              <a href="#evidencia"><span>05</span>Evidencia</a>
+              <a href="#precauciones"><span>06</span>Precauciones</a>
+              <a href="#fuentes"><span>07</span>Fuentes</a>
+            </nav>
+            <div class="plant-index__rule"></div>
+            <small>El nombre común “salvia” no alcanza para identificar un taxón. Esta ficha trata específicamente de <em>Salvia officinalis</em> L.</small>
+          </div>
+        </aside>
+
+        <article class="plant-article">
+          <section class="plant-section plant-section--opening" id="taxonomia">
+            <header class="plant-section__header">
+              <h2>Taxonomía</h2>
+            </header>
+
+            <p class="plant-lead">El nombre aceptado es <em>Salvia officinalis</em> L., dentro del género <em>Salvia</em> y la familia Lamiaceae. La especie fue publicada por Linneo en <em>Species Plantarum</em> en 1753. <a class="source-ref" href="#source-1" aria-label="Ver fuente 1">[1]</a></p>
+
+            <div class="plant-copy-grid">
+              <div>
+                <p>Es una planta perenne y semileñosa, muy ramificada y aromática. Los tallos jóvenes suelen presentar la sección cuadrangular característica de muchas lamiáceas; las hojas son simples, opuestas, gris verdosas y pubescentes, con una textura visible.</p>
+                <p>Las flores aparecen agrupadas en verticilos sobre ejes florales y suelen variar entre tonos azulados y lavanda. El porte puede variar según cultivar, ambiente y manejo, por lo que no conviene tratar una única altura como rasgo taxonómico rígido.</p>
+              </div>
+              <aside class="plant-note plant-note--field">
+                <span>Nota de archivo</span>
+                <p>“Salvia” es un nombre común compartido. En estudios, monografías o productos importa comprobar qué taxón fue realmente utilizado.</p>
+              </aside>
+            </div>
+
+            <figure class="plant-photo plant-photo--wide">
+              <img src={fieldPhoto.assetUrl} alt={fieldPhoto.alt} loading="lazy" referrerpolicy="no-referrer" />
+              <figcaption>
+                <p>Una planta real en flor, fotografiada en Marzling, Alemania.</p>
+                <small>Foto: Flocci Nivis / Wikimedia Commons · CC BY 4.0</small>
+              </figcaption>
+            </figure>
+
+            <div class="plant-detail-pair">
+              <figure class="plant-photo plant-photo--detail">
+                <img src={leafPhoto.assetUrl} alt={leafPhoto.alt} loading="lazy" referrerpolicy="no-referrer" />
+                <figcaption>
+                  <p>Detalle de hoja: superficie gris verdosa, marcada y pubescente.</p>
+                  <small>Foto: Plenuska / Wikimedia Commons · CC BY-SA 4.0</small>
+                </figcaption>
+              </figure>
+              <div class="plant-morphology">
+                <p class="plant-label">Rasgos de lectura</p>
+                <dl>
+                  <div><dt>Hojas</dt><dd>Simples, opuestas, aromáticas y pubescentes.</dd></div>
+                  <div><dt>Tallos jóvenes</dt><dd>Habitualmente cuadrangulares.</dd></div>
+                  <div><dt>Flores</dt><dd>Bilabiadas, azuladas a violáceas.</dd></div>
+                  <div><dt>Porte</dt><dd>Subarbustivo, variable con ambiente y manejo.</dd></div>
+                </dl>
+              </div>
+            </div>
+          </section>
+
+          <section class="plant-section" id="habitat">
+            <header class="plant-section__header">
+              <h2>Hábitat</h2>
+            </header>
+            <p class="plant-lead">Su distribución nativa se concentra en Europa meridional y centro-meridional. Describirla como “mediterránea” resulta útil como aproximación cultural, pero demasiado estrecho como definición botánica. <a class="source-ref" href="#source-1" aria-label="Ver fuente 1">[1]</a></p>
+            <div class="plant-copy-grid">
+              <div>
+                <p>En su área de origen se asocia con ambientes abiertos y relativamente secos. En cultivo prospera especialmente bien en posiciones soleadas y suelos de buen drenaje.</p>
+                <p>Fuera de su rango nativo se cultiva ampliamente y aparece introducida en numerosos territorios. Para el Cono Sur, Kew registra a Uruguay entre las áreas introducidas. En Argentina, las fuentes revisadas no permiten afirmar con suficiente seguridad que se encuentre naturalizada.</p>
+              </div>
+              <figure class="plant-photo plant-photo--context">
+                <img src={habitatPhoto.assetUrl} alt={habitatPhoto.alt} loading="lazy" referrerpolicy="no-referrer" />
+                <figcaption>
+                  <p>Imagen de porte y contexto; no se usa como prueba de rango nativo.</p>
+                  <small>Foto: Javier martin / Wikimedia Commons · dominio público</small>
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section class="plant-section" id="cultivo">
+            <header class="plant-section__header">
+              <h2>Cultivo</h2>
+            </header>
+            <p class="plant-lead">La salvia oficinal funciona bien como planta de jardín y también puede mantenerse en maceta cuando recibe luz suficiente y el sustrato drena con facilidad.</p>
+            <div class="plant-cultivation-grid">
+              <article><h3>Luz</h3><p>Prefiere pleno sol. La ventilación y la exposición ayudan a evitar un crecimiento excesivamente húmedo.</p></article>
+              <article><h3>Suelo</h3><p>Textura ligera a media y buen drenaje. El encharcamiento persistente es más problemático que un periodo seco ocasional.</p></article>
+              <article><h3>Riego</h3><p>Debe adaptarse al clima, al tamaño de la planta y al recipiente; no existe una frecuencia universal.</p></article>
+              <article><h3>Poda</h3><p>Una poda moderada puede mantener la forma y favorecer brotes nuevos, evitando cortes profundos sobre madera vieja.</p></article>
+            </div>
+            <p>Entre los problemas de cultivo descritos aparecen pudrición radicular, oídio y marchitez por <em>Verticillium</em>. Para calendarios de siembra, poda o trasplante, Aluhe prioriza estación y clima por encima de meses universales.</p>
+          </section>
+
+          <section class="plant-section" id="usos">
+            <header class="plant-section__header">
+              <h2>Usos tradicionales</h2>
+            </header>
+            <p class="plant-lead">La salvia oficinal tiene una larga trayectoria culinaria y herbal en Europa. Sus hojas aromáticas se emplean como condimento y la especie también se cultiva con fines ornamentales.</p>
+            <aside class="plant-principle" role="note" aria-label="Principio editorial de Aluhe">
+              <span>Principio editorial de Aluhe</span>
+              <p>Uso tradicional no significa eficacia clínica demostrada.</p>
+            </aside>
+            <p>En tradiciones herbarias europeas, la hoja ha formado parte de preparaciones destinadas a molestias digestivas leves, boca y garganta, sudoración y ciertos usos externos sobre la piel. <a class="source-ref" href="#source-5" aria-label="Ver fuente 5">[5]</a> La monografía europea de hoja de <em>Salvia officinalis</em> permite documentar esa tradición con mayor precisión que una lista genérica de “propiedades medicinales”.</p>
+            <p>Una hoja fresca usada en cocina, una hoja seca para tisana, un extracto, un preparado oromucosal y el aceite esencial no son exposiciones equivalentes. Por eso la nueva ficha no conserva recetas domésticas ni dosis heredadas del sitio antiguo.</p>
+          </section>
+
+          <section class="plant-section plant-section--evidence" id="evidencia">
+            <header class="plant-section__header">
+              <h2>Evidencia</h2>
+            </header>
+            <p class="plant-lead">Existe investigación clínica sobre <em>Salvia officinalis</em>, pero es limitada y depende mucho del preparado estudiado. No hay base para hablar de una lista uniforme de “propiedades” aplicables a cualquier forma de consumo.</p>
+
+            <div class="evidence-principle">
+              <p class="plant-label">Antes de interpretar un estudio</p>
+              <strong>Taxón + parte vegetal + preparación + vía + población + resultado.</strong>
+              <p>Si cambia uno de esos elementos, cambia también lo que podemos afirmar.</p>
+            </div>
+
+            <div class="evidence-list">
+              <article>
+                <span class="evidence-list__number">01</span>
+                <div>
+                  <h3>Boca y garganta</h3>
+                  <p>Un ensayo aleatorizado y controlado con placebo en 286 pacientes con faringitis viral aguda encontró mayor reducción del dolor con un <strong>spray específico de extracto fluido</strong> que con placebo durante las primeras horas. <a class="source-ref source-ref--dark" href="#source-7" aria-label="Ver fuente 7">[7]</a></p>
+                  <small>Lectura Aluhe: resultado concreto para una formulación concreta; no demuestra que una infusión doméstica cure infecciones respiratorias.</small>
+                </div>
+              </article>
+              <article>
+                <span class="evidence-list__number">02</span>
+                <div>
+                  <h3>Glucosa y diabetes tipo 2</h3>
+                  <p>Algunos ensayos con extractos de hoja comunicaron cambios favorables en parámetros glucémicos. Una revisión posterior encontró solamente tres estudios elegibles. <a class="source-ref source-ref--dark" href="#source-8" aria-label="Ver fuentes 8 y 9">[8–9]</a></p>
+                  <small>Lectura Aluhe: señales preliminares, insuficientes para presentar la salvia como tratamiento para diabetes.</small>
+                </div>
+              </article>
+              <article>
+                <span class="evidence-list__number">03</span>
+                <div>
+                  <h3>Menopausia</h3>
+                  <p>Ensayos pequeños han estudiado extractos en síntomas menopáusicos y sofocos. El conjunto disponible sigue siendo reducido y heterogéneo. <a class="source-ref source-ref--dark" href="#source-10" aria-label="Ver fuente 10">[10]</a></p>
+                  <small>Lectura Aluhe: línea de investigación; no propiedad general de cualquier preparado de salvia.</small>
+                </div>
+              </article>
+              <article>
+                <span class="evidence-list__number">04</span>
+                <div>
+                  <h3>Memoria y cognición</h3>
+                  <p>Existen pequeños estudios con extractos específicos en adultos mayores y un ensayo antiguo en enfermedad de Alzheimer leve a moderada. <a class="source-ref source-ref--dark" href="#source-11" aria-label="Ver fuente 11">[11]</a></p>
+                  <small>Lectura Aluhe: interés exploratorio; no establece a la salvia como tratamiento para deterioro cognitivo o demencia.</small>
+                </div>
+              </article>
+            </div>
+
+            <div class="evidence-boundary">
+              <span>No extrapolar</span>
+              <p>Resultados <em>in vitro</em> antimicrobianos o antiinflamatorios no justifican expresiones como “antibiótico natural”, “combate virus y bacterias” o “está indicada para artritis”.</p>
+            </div>
+          </section>
+
+          <section class="plant-section plant-section--safety" id="precauciones">
+            <header class="plant-section__header">
+              <h2>Precauciones</h2>
+            </header>
+            <p class="plant-lead">La seguridad depende del material y de la forma de exposición. La hoja usada en cantidades culinarias no debe tratarse como equivalente al aceite esencial o a extractos concentrados.</p>
+            <div class="safety-card">
+              <div class="safety-card__mark" aria-hidden="true">!</div>
+              <div>
+                <h3>Aceite esencial</h3>
+                <p>Es un preparado concentrado cuya composición puede variar. Se han descrito intoxicaciones y convulsiones asociadas a su ingestión, incluidos reportes pediátricos. <a class="source-ref" href="#source-12" aria-label="Ver fuente 12">[12]</a> Aluhe no ofrece instrucciones domésticas para ingerir aceite esencial de salvia.</p>
+              </div>
+            </div>
+            <div class="plant-copy-grid">
+              <div>
+                <p>El NCCIH considera que la salvia en cantidades habituales de alimentos es generalmente segura, pero advierte que dosis elevadas o usos prolongados pueden presentar riesgos. <a class="source-ref" href="#source-6" aria-label="Ver fuente 6">[6]</a> Compuestos como tuyona y alcanfor son especialmente relevantes en preparados concentrados.</p>
+                <p>Durante el embarazo existe un motivo de precaución, sobre todo por la exposición a tuyona. Para lactancia y población pediátrica la información disponible no permite formular mensajes universales.</p>
+              </div>
+              <aside class="plant-note plant-note--oxide">
+                <span>Regla editorial</span>
+                <p>La ausencia de datos no se interpreta como ausencia de riesgo. Esta ficha es botánica y documental; no indica tratamientos.</p>
+              </aside>
+            </div>
+          </section>
+
+          <section class="plant-section plant-section--sources" id="fuentes">
+            <header class="plant-section__header">
+              <h2>Fuentes</h2>
+            </header>
+            <p class="plant-lead">La ficha fue redactada a partir de una revisión realizada el 28 de septiembre de 2026. La selección siguiente muestra el núcleo documental del dossier piloto.</p>
+
+            <div class="source-groups">
+              <section>
+                <h3>Botánica, distribución y cultivo</h3>
+                <ol>
+                  <li id="source-1"><strong>Royal Botanic Gardens, Kew — Plants of the World Online.</strong> Nombre aceptado, autoría, familia, distribución e información infraespecífica.</li>
+                  <li id="source-2"><strong>GBIF.</strong> Control taxonómico complementario.</li>
+                  <li id="source-3"><strong>NC State Extension Plant Toolbox.</strong> Morfología práctica, cultivo, porte y problemas de jardín.</li>
+                  <li id="source-4"><strong>SIB — Administración de Parques Nacionales, Argentina.</strong> Referencia institucional para la capa regional argentina.</li>
+                </ol>
+              </section>
+              <section>
+                <h3>Uso herbal, evidencia y seguridad</h3>
+                <ol start="5">
+                  <li id="source-5"><strong>European Medicines Agency / HMPC.</strong> <em>Salviae officinalis folium</em>.</li>
+                  <li id="source-6"><strong>NCCIH.</strong> Síntesis institucional sobre investigación y seguridad de sage.</li>
+                  <li id="source-7"><strong>Hubbert et al. (2006).</strong> Spray de <em>S. officinalis</em> en faringitis aguda. PMID 16504956.</li>
+                  <li id="source-8"><strong>Kianbakht & Hashem Dabaghian (2013).</strong> Extracto de hoja en diabetes tipo 2. DOI 10.1016/j.ctim.2013.07.004.</li>
+                  <li id="source-9"><strong>Abdollahi et al. (2023).</strong> Revisión sistemática y metaanálisis de parámetros glucémicos.</li>
+                  <li id="source-10"><strong>Dimpfel et al. (2021) / Moradi et al. (2023).</strong> Investigación sobre síntomas menopáusicos.</li>
+                  <li id="source-11"><strong>Scholey et al. (2008) / Akhondzadeh et al. (2003).</strong> Estudios exploratorios sobre memoria y cognición.</li>
+                  <li id="source-12"><strong>Halicioglu et al. (2011).</strong> Reporte clínico de toxicidad asociada a aceite de salvia en población pediátrica.</li>
+                </ol>
+              </section>
+            </div>
+
+            <div class="visual-credits">
+              <p class="plant-label">Créditos visuales</p>
+              <ul>
+                {media.items.map((item) => (
+                  <li>
+                    <a href={item.sourcePageUrl} target="_blank" rel="noreferrer">{item.title}</a>
+                    <small>{item.creator} · {item.license}</small>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+
+          <footer class="plant-closing">
+            <div>
+              <p>Ficha 01 · Salvia</p>
+              <strong>Archivo en preparación.</strong>
+            </div>
+            <a href="/studies/home/">← Volver al estudio de Home</a>
+          </footer>
+        </article>
+      </div>
+    </main>
+
+    <script>
+      import { initPlantSectionNav } from '../../scripts/plant-section-nav';
+      initPlantSectionNav();
+    </script>
+  </body>
+</html>
